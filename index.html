@@ -3,162 +3,181 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio - Power BI & Consultoria</title>
+  <title>Consultoria & Power BI — Portfolio</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #f4f7fa;
-      color: #222;
-    }
+    body { margin:0; font-family:'Segoe UI',Arial,sans-serif; background:#f3f6fa; color:#30395c;}
     header {
-      background: linear-gradient(90deg, #1b77c2 60%, #39c3e5 100%);
+      background: linear-gradient(90deg, #1b77c2 65%, #42c3e5 100%);
       color: #fff;
-      padding: 50px 20px 30px 20px;
+      padding: 50px 20px 40px 20px;
       text-align: center;
     }
-    header h1 {
-      font-size: 2.7rem;
-      margin-bottom: 10px;
-      font-weight: 700;
-      letter-spacing: 1px;
+    header h1 { font-size:2.8rem; font-weight:700; margin:0 0 20px;}
+    header p { font-size:1.4rem; font-weight:400; margin:0;}
+    .cta-section, .problema-section, .port-section, .cases-section, .focus-section, .about-section, .contact-section {
+      background:#fff; border-radius:16px; box-shadow:0 3px 12px rgba(0,30,70,0.11); padding:34px 22px; margin:32px 0;
     }
-    header p {
-      font-size: 1.4rem;
-      margin-bottom: 15px;
-      font-weight: 400;
-    }
+    .container {max-width:980px; margin:0 auto; padding:0 15px;}
+    .section-title {font-size:1.7rem; color:#1b77c2; font-weight:600; margin-bottom:24px;}
     .cta-btn {
-      background: #fff;
-      color: #1b77c2;
-      padding: 12px 35px;
-      border: none;
-      border-radius: 25px;
-      font-size: 1rem;
-      cursor: pointer;
-      font-weight: 600;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.09);
-      margin-top: 15px;
-      transition: background 0.25s,color 0.25s;
+      background:#fff; color:#1b77c2; border:none; font-weight:600; border-radius:22px;
+      padding:14px 38px; font-size:1.1rem; margin-top:12px; cursor:pointer; transition:.25s;
     }
-    .cta-btn:hover {
-      background: #1b77c2;
-      color: #fff;
+    .cta-btn:hover {background:#1b77c2; color:#fff;}
+    .img-row, .case-row {display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:14px;}
+    .img-box, .case-box, .focus-box {
+      background:#f4f6fb; border-radius:13px; padding:11px; flex:1 1 230px; min-width:240px; text-align:center; 
+      box-shadow:0 1px 7px rgba(0,30,70,0.09);
     }
-    .container {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 0 18px;
+    .img-box img, .case-box img, .focus-box img {width:100%;max-width:260px;height:135px;object-fit:cover;border-radius:9px;}
+    .case-box a {display:block; margin-top:8px; font-weight:600; color:#1b77c2;}
+    .focus-box {margin:18px auto;}
+    /* SOBRE */
+    .about-cards { display:flex; flex-wrap:wrap; gap:18px; justify-content:center;}
+    .about-card {background:#f7fafd; border-radius:12px; padding:18px 10px; flex:1 1 300px; text-align:center; box-shadow:0 1.5px 8px rgba(0,30,70,0.10);}
+    /* FORM */
+    .contact-section form {max-width:440px; margin:0 auto;}
+    .contact-section input, .contact-section textarea {
+      width:98%; margin:12px 0; padding:12px;
+      border-radius:9px; border:1px solid #b5c7de; font-size:1.05rem;
     }
-    section {
-      background: #fff;
-      border-radius: 20px;
-      box-shadow: 0 2px 13px rgba(0,30,70,0.09);
-      padding: 30px 25px;
-      margin-bottom: 36px;
-    }
-    section h2 {
-      font-size: 1.7rem;
-      margin-bottom: 18px;
-      color: #1b77c2;
-      font-weight: 600;
-    }
-    section ul {
-      text-align: left;
-      margin: 0 0 18px 18px;
-      padding: 0;
-      font-size: 1.1rem;
-    }
-    section li {
-      margin-bottom: 10px;
-    }
-    .form-area {
-      text-align: center;
-    }
-    input, textarea {
-      display: block;
-      width: 90%;
-      margin: 12px auto 0 auto;
-      padding: 12px;
-      border-radius: 12px;
-      border: 1px solid #c3d5e5;
-      font-size: 1rem;
-      box-sizing: border-box;
-    }
-    button[type="submit"] {
-      background: #39c3e5;
-      color: #fff;
-      padding: 14px 48px;
-      margin-top: 18px;
-      border: none;
-      border-radius: 24px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.18s;
-    }
-    button[type="submit"]:hover {
-      background: #1b77c2;
-    }
-    footer {
-      background: #1b77c2;
-      color: #fff;
-      padding: 26px 0;
-      text-align: center;
-      font-size: 1rem;
-      border-top: 3px solid #39c3e5;
-      letter-spacing: 1px;
-      margin-top: 35px;
-    }
-    @media (max-width:600px) {
-      header h1 { font-size: 2rem; }
-      .container { padding: 0 7px; }
-      section { padding: 18px 7px; }
+    .contact-section button {background:#1b77c2; color:#fff; padding:13px 42px; border:none; border-radius:22px; font-size:1.1rem; cursor:pointer; font-weight:600;}
+    .contact-section button:hover {background:#42c3e5;}
+    /* FOOTER */
+    footer {background:#1b77c2; color:#fff; text-align:center; padding:30px 0 18px; margin-top:35px;}
+    .footer-links a {color:#fff;margin:0 7px;text-decoration:none;font-weight:600;}
+    .footer-contact {margin-top:10px; font-size:1rem;}
+    @media(max-width:700px){
+      .img-row,.case-row,.about-cards{flex-direction:column;}
+      header h1{font-size:2rem;}
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Consultoria & Portfólio Power BI</h1>
-    <p>Transformando dados em decisões inteligentes! Consultoria, dashboards e análises estratégicas sob medida.</p>
-    <button class="cta-btn" onclick="document.getElementById('form').scrollIntoView({behavior:'smooth'})">
-      Solicite contato
-    </button>
+    <h1>Consultoria de Dados & Power BI</h1>
+    <p>Transformando informação em estratégia — Dashboards, Insights e Resultados Reais</p>
+    <button class="cta-btn" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">Solicite Contato</button>
   </header>
 
   <div class="container">
-    <section>
-      <h2>O que fazemos?</h2>
-      <ul>
-        <li>Consultoria estratégica em análise de dados</li>
-        <li>Dashboards interativos em Power BI (Vendas, RH, Financeiro, Produção...)</li>
-        <li>Otimização de operações, identificação de oportunidades e gestão de riscos</li>
-        <li>Implantação de soluções de Business Intelligence personalizadas</li>
-      </ul>
+
+    <section class="cta-section">
+      <div class="section-title">Consultoria sob medida</div>
       <p>
-        Oferecemos suporte completo, desde o mapeamento do seu negócio até a entrega de relatórios profissionais fáceis de visualizar e interpretar.
+        Dados são seu maior patrimônio competitivo. Obtenha análises estratégicas, dashboards personalizados em Power BI e suporte expert desde o diagnóstico até a entrega de resultados práticos para seu negócio.
+      </p>
+      <div class="img-row">
+        <div class="img-box"><img src="https://via.placeholder.com/260x135?text=Power+BI" alt="Power BI"></div>
+        <div class="img-box"><img src="https://via.placeholder.com/260x135?text=Consultoria" alt="Consultoria"></div>
+      </div>
+    </section>
+
+    <section class="problema-section">
+      <div class="section-title">Seu desafio não é único — tem solução!</div>
+      <p>
+        Muitas empresas sentem que estão “afogadas” em dados, mas ainda têm dificuldade para visualizar oportunidades, encontrar causas de problemas ou tomar decisões rápidas.<br>
+        Você não está sozinho(a): já ajudamos diversas organizações a transformar dados complexos em decisões simples e lucrativas.
+      </p>
+      <p>
+        Nosso diferencial é entender seu contexto, adaptar indicadores à sua realidade e entregar painéis sob medida, garantindo clareza e agilidade para sua equipe.
       </p>
     </section>
 
-    <section>
-      <h2>Projetos & Portfólio</h2>
-      <ul>
-        <li>Análise de Margem Bruta e simuladores para o lucro operacional</li>
-        <li>Indicadores de entrega (OTIF/OEE) e desempenho operacional</li>
-        <li>Dashboards de vendas, compras, estoque e suporte técnico</li>
-        <li>Modelos analisando receita, curva ABC, liquidez e endividamento</li>
-        <li>Visualização personalizada em Power BI e integração SQL Server</li>
-      </ul>
-      <p>Veja exemplos e simuladores criados para diversos segmentos. <br>
-      <a href="https://murilomaxwellbi.github.io/" target="_blank">Veja portfólio completo</a>
+    <section class="port-section">
+      <div class="section-title">Portfólio de projetos</div>
+      <div class="img-row">
+        <div class="img-box">
+          <img src="https://via.placeholder.com/260x135?text=Dashboard+Financeiro" alt="Dashboard Financeiro">
+          <p>Dashboard Financeiro — Visualização de receitas, despesas e margem.</p>
+        </div>
+        <div class="img-box">
+          <img src="https://via.placeholder.com/260x135?text=RH+Power+BI" alt="RH PowerBI">
+          <p>Indicadores RH — Turnover, absenteísmo, produtividade.</p>
+        </div>
+        <div class="img-box">
+          <img src="https://via.placeholder.com/260x135?text=Logística" alt="Logística">
+          <p>Logística — Estoque, giro e custos em tempo real.</p>
+        </div>
+      </div>
+      <p>Veja mais exemplos completos em <a href="https://murilomaxwellbi.github.io/" target="_blank">meu portfólio</a>.</p>
+    </section>
+
+    <section class="cases-section">
+      <div class="section-title">Cases & Experiências reais</div>
+      <div class="case-row">
+        <div class="case-box">
+          <img src="https://via.placeholder.com/260x135?text=Case+Exemplo+1" alt="Case Exemplo 1">
+          <p>Financeiro para Indústria — <strong>Ver painel</strong></p>
+          <a href="https://app.powerbi.com/view?r=PAINEL_EXEMPLO1" target="_blank">Acessar BI</a>
+        </div>
+        <div class="case-box">
+          <img src="https://via.placeholder.com/260x135?text=Case+Exemplo+2" alt="Case Exemplo 2">
+          <p>Vendas Multicanal — <strong>Ver painel</strong></p>
+          <a href="https://app.powerbi.com/view?r=PAINEL_EXEMPLO2" target="_blank">Acessar BI</a>
+        </div>
+        <div class="case-box">
+          <img src="https://via.placeholder.com/260x135?text=Case+Control+Id" alt="Painel Control Id">
+          <p><strong>Painel de Controle (Control Id)</strong><br>Gestão operacional e indicadores-chave.</p>
+          <a href="https://app.powerbi.com/view?r=CONTROLID" target="_blank">Ir para painel</a>
+        </div>
+      </div>
+      <p>
+        Painéis interativos, simuladores de cenário e insights acionáveis para cada etapa da sua operação.
       </p>
     </section>
 
-    <section id="form">
-      <h2>Fale Conosco</h2>
-      <div class="form-area">
-        <form>
-          <input type="text" name="nome" placeholder="Seu nome" required>
-          <input type="email" name="email" placeholder="Seu e-mail" required>
-          <textarea name="mensagem" placeholder="Seu objetivo ou dúvida" rows="3"></textarea>
-          <button type="submit">Enviar mensagem
+    <section class="focus-section">
+      <div class="section-title">Foco no Painel do <strong>Control Id</strong></div>
+      <div class="focus-box">
+        <img src="https://via.placeholder.com/260x135?text=Control+Id+Dashboard" alt="Control Id Dashboard">
+        <p>
+          Painel completo para análise operacional detalhada, gestão de acesso e monitoramento em tempo real.<br>
+          <a href="https://app.powerbi.com/view?r=CONTROLID" target="_blank"><strong>Visualizar agora</strong></a>
+        </p>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <div class="section-title">Sobre a empresa & Sobre mim</div>
+      <div class="about-cards">
+        <div class="about-card">
+          <h3>Sobre a Empresa</h3>
+          <p>
+            Nossa missão é capacitar empresas a tomar decisões rápidas, inteligentes e baseadas em dados reais. Unimos tecnologia, experiência e didática para entregar painéis claros, ações práticas e resultado para todos os setores.
+          </p>
+        </div>
+        <div class="about-card">
+          <h3>Sobre Mim</h3>
+          <p>
+            Profissional especializado em BI e consultoria de dados, com experiência em projetos nos segmentos de indústria, varejo e serviços. Foco em Power BI, integração SQL Server e modelagem de indicadores estratégicos de ponta a ponta.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contato">
+      <div class="section-title">Fale com a Consultoria</div>
+      <form>
+        <input type="text" name="nome" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <textarea name="mensagem" placeholder="Seu objetivo ou dúvida" rows="3"></textarea>
+        <button type="submit">Enviar mensagem</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="mailto:contato@murilomaxwellbi.com.br">E-mail</a> |
+      <a href="https://www.linkedin.com/in/murilo-maxwell" target="_blank">LinkedIn</a> |
+      <a href="https://wa.me/5591992415390" target="_blank">WhatsApp</a>
+    </div>
+    <div class="footer-contact">
+      <span>(91) 99241-5390 — Rua Principal, 123, Cidade/UF</span>
+    </div>
+    <div style="margin-top:10px;font-size:0.95rem;">&copy; 2025 BIConsulting & Murilo Maxwell BI. Todos os direitos reservados.</div>
+  </footer>
+</body>
+</html>
