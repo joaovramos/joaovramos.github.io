@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio - Power BI & Consultoria</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f4f7fa;
+      color: #222;
+    }
+    header {
+      background: linear-gradient(90deg, #1b77c2 60%, #39c3e5 100%);
+      color: #fff;
+      padding: 50px 20px 30px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.7rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    header p {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      font-weight: 400;
+    }
+    .cta-btn {
+      background: #fff;
+      color: #1b77c2;
+      padding: 12px 35px;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.09);
+      margin-top: 15px;
+      transition: background 0.25s,color 0.25s;
+    }
+    .cta-btn:hover {
+      background: #1b77c2;
+      color: #fff;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 18px;
+    }
+    section {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 2px 13px rgba(0,30,70,0.09);
+      padding: 30px 25px;
+      margin-bottom: 36px;
+    }
+    section h2 {
+      font-size: 1.7rem;
+      margin-bottom: 18px;
+      color: #1b77c2;
+      font-weight: 600;
+    }
+    section ul {
+      text-align: left;
+      margin: 0 0 18px 18px;
+      padding: 0;
+      font-size: 1.1rem;
+    }
+    section li {
+      margin-bottom: 10px;
+    }
+    .form-area {
+      text-align: center;
+    }
+    input, textarea {
+      display: block;
+      width: 90%;
+      margin: 12px auto 0 auto;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid #c3d5e5;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    button[type="submit"] {
+      background: #39c3e5;
+      color: #fff;
+      padding: 14px 48px;
+      margin-top: 18px;
+      border: none;
+      border-radius: 24px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.18s;
+    }
+    button[type="submit"]:hover {
+      background: #1b77c2;
+    }
+    footer {
+      background: #1b77c2;
+      color: #fff;
+      padding: 26px 0;
+      text-align: center;
+      font-size: 1rem;
+      border-top: 3px solid #39c3e5;
+      letter-spacing: 1px;
+      margin-top: 35px;
+    }
+    @media (max-width:600px) {
+      header h1 { font-size: 2rem; }
+      .container { padding: 0 7px; }
+      section { padding: 18px 7px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Consultoria & Portfólio Power BI</h1>
+    <p>Transformando dados em decisões inteligentes! Consultoria, dashboards e análises estratégicas sob medida.</p>
+    <button class="cta-btn" onclick="document.getElementById('form').scrollIntoView({behavior:'smooth'})">
+      Solicite contato
+    </button>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2>O que fazemos?</h2>
+      <ul>
+        <li>Consultoria estratégica em análise de dados</li>
+        <li>Dashboards interativos em Power BI (Vendas, RH, Financeiro, Produção...)</li>
+        <li>Otimização de operações, identificação de oportunidades e gestão de riscos</li>
+        <li>Implantação de soluções de Business Intelligence personalizadas</li>
+      </ul>
+      <p>
+        Oferecemos suporte completo, desde o mapeamento do seu negócio até a entrega de relatórios profissionais fáceis de visualizar e interpretar.
+      </p>
+    </section>
+
+    <section>
+      <h2>Projetos & Portfólio</h2>
+      <ul>
+        <li>Análise de Margem Bruta e simuladores para o lucro operacional</li>
+        <li>Indicadores de entrega (OTIF/OEE) e desempenho operacional</li>
+        <li>Dashboards de vendas, compras, estoque e suporte técnico</li>
+        <li>Modelos analisando receita, curva ABC, liquidez e endividamento</li>
+        <li>Visualização personalizada em Power BI e integração SQL Server</li>
+      </ul>
+      <p>Veja exemplos e simuladores criados para diversos segmentos. <br>
+      <a href="https://murilomaxwellbi.github.io/" target="_blank">Veja portfólio completo</a>
+      </p>
+    </section>
+
+    <section id="form">
+      <h2>Fale Conosco</h2>
+      <div class="form-area">
+        <form>
+          <input type="text" name="nome" placeholder="Seu nome" required>
+          <input type="email" name="email" placeholder="Seu e-mail" required>
+          <textarea name="mensagem" placeholder="Seu objetivo ou dúvida" rows="3"></textarea>
+          <button type="submit">Enviar mensagem
