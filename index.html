@@ -4,84 +4,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JVR Consultoria — Infra & Data BI</title>
-  <meta name="description" content="Consultoria em Infraestrutura de TI, Segurança de Rede, CFTV e Data BI com Power BI. Da operação ao nível estratégico, conectando tecnologia, pessoas e resultados.">
+  <meta name="description" content="Consultoria em Infraestrutura de TI, Segurança de Rede, CFTV e Data BI com Power BI. Da operação ao nível estratégico.">
   <style>
-    body { margin:0; font-family:'Segoe UI',Arial,sans-serif; background:#f3f6fa; color:#30395c; line-height:1.6;}
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Segoe UI',Arial,sans-serif; background:#f3f6fa; color:#30395c; line-height:1.6; }
+    
+    /* HEADER COM LOGO GRANDE */
     header {
       background: linear-gradient(90deg, #1b77c2 65%, #42c3e5 100%);
-      color: #fff; padding: 26px 20px 34px 20px;
+      color: #fff; padding: 30px 20px; position:relative;
     }
-    .header-inner{
-      max-width:980px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap;
+    .header-container {
+      max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;
     }
-    .logo-wrap{
-      display:flex; align-items:center; gap:14px;
+    .logo-section img {
+      height: 80px; width: auto; max-width: 250px; object-fit: contain;
     }
-    .logo-wrap img{
-      height:54px; max-width:170px; object-fit:contain;
+    .header-text {
+      flex: 1; text-align: center;
     }
-    .header-text{
-      max-width:520px; text-align:right;
+    .header-text h1 { 
+      font-size: 2.5rem; font-weight: 700; margin-bottom: 8px; 
     }
-    .header-text h1 { font-size:2.4rem; font-weight:700; margin:0 0 10px;}
-    .header-text p { font-size:1.1rem; font-weight:400; margin:0;}
-    .header-cta{
-      text-align:center; margin-top:18px;
+    .header-text p { 
+      font-size: 1.2rem; opacity: 0.95; 
     }
-    .cta-btn {
-      background:#fff; color:#1b77c2; border:none; font-weight:600; border-radius:22px;
-      padding:12px 34px; font-size:1.05rem; cursor:pointer; transition:.25s; display:inline-block;
+    .cta-header {
+      background: rgba(255,255,255,0.95); color: #1b77c2; border: none; 
+      font-weight: 600; border-radius: 25px; padding: 14px 35px; 
+      font-size: 1.1rem; cursor: pointer; transition: all 0.3s; 
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
-    .cta-btn:hover {background:#1b77c2; color:#fff;}
+    .cta-header:hover { 
+      background: #1b77c2; color: white; transform: translateY(-2px); 
+    }
 
-    .problema-section, .port-section, .cases-section, .about-section, .contact-section {
-      background:#fff; border-radius:16px; box-shadow:0 3px 12px rgba(0,30,70,0.11); padding:34px 22px; margin:32px auto; max-width:980px;
+    /* SEÇÕES */
+    .section {
+      background: white; border-radius: 20px; box-shadow: 0 8px 30px rgba(0,30,70,0.12); 
+      padding: 40px 30px; margin: 40px auto; max-width: 1100px;
     }
-    .container {max-width:980px; margin:0 auto; padding:0 15px;}
-    .section-title {font-size:1.7rem; color:#1b77c2; font-weight:600; margin-bottom:24px; text-align:center;}
-    .img-row, .case-row {display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:14px;}
-    .img-box, .case-box {
-      background:#f4f6fb; border-radius:13px; padding:11px; flex:1 1 230px; min-width:240px; text-align:center; 
-      box-shadow:0 1px 7px rgba(0,30,70,0.09); transition:.2s;
+    .section-title { 
+      font-size: 2rem; color: #1b77c2; font-weight: 600; 
+      margin-bottom: 30px; text-align: center; 
     }
-    .img-box:hover, .case-box:hover { transform:translateY(-3px); }
-    .img-box img, .case-box img {width:100%; max-width:290px; height:160px; object-fit:cover; border-radius:9px;}
-    .case-box a {display:inline-block; margin-top:10px; font-weight:600; color:#1b77c2; text-decoration:none;}
-    .case-box a:hover {color:#42c3e5;}
 
-    /* SOBRE */
-    .about-cards { display:flex; flex-wrap:wrap; gap:18px; justify-content:center;}
-    .about-card {background:#f7fafd; border-radius:12px; padding:18px 10px; flex:1 1 300px; text-align:center; box-shadow:0 1.5px 8px rgba(0,30,70,0.10);}
-    .about-card img {width:80px; height:80px; border-radius:50%; margin-bottom:12px;}
-    .about-card ul {text-align:left; padding-left:20px; margin:0;}
-
-    /* FORM */
-    .contact-section form {max-width:440px; margin:0 auto;}
-    .contact-section input, .contact-section textarea {
-      width:98%; margin:12px 0; padding:12px; border-radius:9px; border:1px solid #b5c7de; font-size:1.05rem; box-sizing:border-box;
+    /* CARDS DIFERENCIAL */
+    .cards-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+      gap: 25px; margin-top: 30px;
     }
-    .contact-section button {background:#1b77c2; color:#fff; padding:13px 42px; border:none; border-radius:22px; font-size:1.1rem; cursor:pointer; font-weight:600; width:100%;}
-    .contact-section button:hover {background:#42c3e5;}
-
-    footer {background:#1b77c2; color:#fff; text-align:center; padding:30px 0 18px; margin-top:35px;}
-    .footer-links a {color:#fff; margin:0 7px; text-decoration:none; font-weight:600;}
-    .footer-contact {margin-top:10px; font-size:1rem;}
-
-    @media(max-width:700px){
-      .header-inner{flex-direction:column; align-items:flex-start;}
-      .header-text{text-align:left; margin-top:10px;}
-      .header-text h1{font-size:2rem;}
-      .header-text p{font-size:1rem;}
-      .img-row,.case-row,.about-cards{flex-direction:column;}
+    .card {
+      background: #f8fbff; border-radius: 15px; padding: 25px; text-align: center; 
+      box-shadow: 0 5px 20px rgba(0,30,70,0.1); transition: all 0.3s;
+      border: 1px solid rgba(27,119,194,0.1);
     }
-  </style>
-</head>
-<body>
-
-  <header>
-    <div class="header-inner">
-      <div class="logo-wrap">
-        <img src="Logo-JVR-Consultoria.png" alt="JVR TI & Data BI Consulting">
-      </div>
-      <div class="header-text">
-        <h1>JVR Consultoria em TI & Data
+    .card:hover { 
+      transform: translateY(-8px); box-shadow: 0 15px 40px rgba(0,30,70,0.2); 
+    }
+    .card img { 
+      width
