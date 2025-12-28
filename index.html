@@ -3,40 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JVR Consultoria & Power BI — Portfolio Analytics</title>
-  <meta name="description" content="Consultoria BI especializada em Power BI, dashboards personalizados e análise estratégica para indústria, varejo e serviços. Transforme seus dados em resultados.">
+  <title>JVR Consultoria — Infra & Data BI</title>
+  <meta name="description" content="Consultoria em Infraestrutura de TI, Segurança de Rede, CFTV e Data BI com Power BI. Da operação ao nível estratégico, conectando tecnologia, pessoas e resultados.">
   <style>
     body { margin:0; font-family:'Segoe UI',Arial,sans-serif; background:#f3f6fa; color:#30395c; line-height:1.6;}
     header {
       background: linear-gradient(90deg, #1b77c2 65%, #42c3e5 100%);
-      color: #fff; padding: 50px 20px 40px 20px; text-align: center;
+      color: #fff; padding: 26px 20px 34px 20px;
     }
-    header h1 { font-size:2.8rem; font-weight:700; margin:0 0 20px;}
-    header p { font-size:1.4rem; font-weight:400; margin:0;}
-    .cta-section, .problema-section, .port-section, .cases-section, .focus-section, .about-section, .contact-section {
+    .header-inner{
+      max-width:980px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap;
+    }
+    .logo-wrap{
+      display:flex; align-items:center; gap:14px;
+    }
+    .logo-wrap img{
+      height:54px; max-width:170px; object-fit:contain;
+    }
+    .header-text{
+      max-width:520px; text-align:right;
+    }
+    .header-text h1 { font-size:2.4rem; font-weight:700; margin:0 0 10px;}
+    .header-text p { font-size:1.1rem; font-weight:400; margin:0;}
+    .header-cta{
+      text-align:center; margin-top:18px;
+    }
+    .cta-btn {
+      background:#fff; color:#1b77c2; border:none; font-weight:600; border-radius:22px;
+      padding:12px 34px; font-size:1.05rem; cursor:pointer; transition:.25s; display:inline-block;
+    }
+    .cta-btn:hover {background:#1b77c2; color:#fff;}
+
+    .problema-section, .port-section, .cases-section, .about-section, .contact-section {
       background:#fff; border-radius:16px; box-shadow:0 3px 12px rgba(0,30,70,0.11); padding:34px 22px; margin:32px auto; max-width:980px;
     }
     .container {max-width:980px; margin:0 auto; padding:0 15px;}
     .section-title {font-size:1.7rem; color:#1b77c2; font-weight:600; margin-bottom:24px; text-align:center;}
-    .cta-btn {
-      background:#fff; color:#1b77c2; border:none; font-weight:600; border-radius:22px;
-      padding:14px 38px; font-size:1.1rem; margin-top:12px; cursor:pointer; transition:.25s; display:inline-block;
-    }
-    .cta-btn:hover {background:#1b77c2; color:#fff;}
     .img-row, .case-row {display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:14px;}
     .img-box, .case-box {
       background:#f4f6fb; border-radius:13px; padding:11px; flex:1 1 230px; min-width:240px; text-align:center; 
       box-shadow:0 1px 7px rgba(0,30,70,0.09); transition:.2s;
     }
     .img-box:hover, .case-box:hover { transform:translateY(-3px); }
-    .img-box img, .case-box img {width:100%; max-width:260px; height:135px; object-fit:cover; border-radius:9px;}
-    .case-box a {display:block; margin-top:8px; font-weight:600; color:#1b77c2; text-decoration:none;}
+    .img-box img, .case-box img {width:100%; max-width:290px; height:160px; object-fit:cover; border-radius:9px;}
+    .case-box a {display:inline-block; margin-top:10px; font-weight:600; color:#1b77c2; text-decoration:none;}
     .case-box a:hover {color:#42c3e5;}
+
     /* SOBRE */
     .about-cards { display:flex; flex-wrap:wrap; gap:18px; justify-content:center;}
     .about-card {background:#f7fafd; border-radius:12px; padding:18px 10px; flex:1 1 300px; text-align:center; box-shadow:0 1.5px 8px rgba(0,30,70,0.10);}
     .about-card img {width:80px; height:80px; border-radius:50%; margin-bottom:12px;}
     .about-card ul {text-align:left; padding-left:20px; margin:0;}
+
     /* FORM */
     .contact-section form {max-width:440px; margin:0 auto;}
     .contact-section input, .contact-section textarea {
@@ -44,148 +62,26 @@
     }
     .contact-section button {background:#1b77c2; color:#fff; padding:13px 42px; border:none; border-radius:22px; font-size:1.1rem; cursor:pointer; font-weight:600; width:100%;}
     .contact-section button:hover {background:#42c3e5;}
-    /* FOOTER */
+
     footer {background:#1b77c2; color:#fff; text-align:center; padding:30px 0 18px; margin-top:35px;}
     .footer-links a {color:#fff; margin:0 7px; text-decoration:none; font-weight:600;}
     .footer-contact {margin-top:10px; font-size:1rem;}
+
     @media(max-width:700px){
+      .header-inner{flex-direction:column; align-items:flex-start;}
+      .header-text{text-align:left; margin-top:10px;}
+      .header-text h1{font-size:2rem;}
+      .header-text p{font-size:1rem;}
       .img-row,.case-row,.about-cards{flex-direction:column;}
-      header h1{font-size:2rem;}
-      header p{font-size:1.2rem;}
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="container">
-      <h1>JVR Consultoria & BI</h1>
-      <p><strong>Dados são seu maior patrimônio competitivo.</strong> Obtenha análises estratégicas, dashboards personalizados em Power BI e suporte expert desde o diagnóstico até resultados práticos.</p>
-      <button class="cta-btn" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">
-        Entre em Contato
-      </button>
-    </div>
-  </header>
-
-  <section class="problema-section">
-    <div class="container">
-      <h2 class="section-title">O problema que você enfrenta</h2>
-      <p>Muitas empresas sentem que estão "<em>afogadas</em>" em dados, mas ainda têm dificuldade para visualizar oportunidades, encontrar causas de problemas ou tomar decisões rápidas.</p>
-      <p><strong>Você não está sozinho(a):</strong> já ajudamos diversas organizações a transformar dados complexos em decisões simples e lucrativas.</p>
-    </div>
-  </section>
-
-  <section class="port-section">
-    <div class="container">
-      <h2 class="section-title">Nosso diferencial</h2>
-      <p>Entendemos seu contexto, adaptamos indicadores à sua realidade e entregamos painéis sob medida, garantindo clareza e agilidade para sua equipe.</p>
-      
-      <div class="img-row">
-        <div class="img-box">
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&fit=crop" alt="Dashboard Financeiro Power BI">
-          <p><strong>Financeiro</strong><br>Receitas, despesas e margem</p>
-        </div>
-        <div class="img-box">
-          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&fit=crop" alt="Dashboard RH Power BI">
-          <p><strong>RH</strong><br>Turnover, absenteísmo, produtividade</p>
-        </div>
-        <div class="img-box">
-          <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&fit=crop" alt="Dashboard Logística Power BI">
-          <p><strong>Logística</strong><br>Estoque, giro e custos em tempo real</p>
-        </div>
-        <div class="img-box">
-          <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&fit=crop" alt="Dashboard Telefonia Power BI">
-          <p><strong>Telefonia</strong><br>ETL Claro, consumo, insights operacionais</p>
-        </div>
-        <div class="img-box">
-          <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?w=400&fit=crop" alt="Dashboard Control ID Power BI">
-          <p><strong>Control ID</strong><br>Coleta e análise de acessos</p>
-        </div>
+    <div class="header-inner">
+      <div class="logo-wrap">
+        <img src="Logo-JVR-Consultoria.jpg" alt="JVR TI & Data BI Consulting">
       </div>
-    </div>
-  </section>
-
-  <section class="cases-section" id="portfolio">
-    <div class="container">
-      <h2 class="section-title">Portfólio — Exemplos reais</h2>
-      <p>Veja dashboards completos desenvolvidos para diferentes setores. <strong>Envie mensagem para acesso aos painéis completos.</strong></p>
-      
-      <div class="case-row">
-        <div class="case-box">
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&fit=crop" alt="Dashboard Financeiro Indústria">
-          <p><strong>Financeiro para Indústria</strong><br>Propostas x Executadas, desvios item a item</p>
-          <a href="#contato" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">Solicitar acesso →</a>
-        </div>
-        <div class="case-box">
-          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&fit=crop" alt="Dashboard Vendas Multicanal">
-          <p><strong>Vendas Multicanal</strong><br>Portfolio Cafeteria completa (vendas, fornecedores, indicadores)</p>
-          <a href="#contato" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">Solicitar acesso →</a>
-        </div>
-        <div class="case-box">
-          <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&fit=crop" alt="Dashboard Telefonia Claro">
-          <p><strong>Telefonia Corporativa</strong><br>ETL arquivos Claro, consumo e insights</p>
-          <a href="#contato" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">Solicitar acesso →</a>
-        </div>
-        <div class="case-box">
-          <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?w=400&fit=crop" alt="Dashboard Control ID">
-          <p><strong>Control ID</strong><br>Acessos VPN D-1, apontamento de horas</p>
-          <a href="#contato" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">Solicitar acesso →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="about-section">
-    <div class="container">
-      <h2 class="section-title">Sobre João V. Ramos</h2>
-      <div class="about-cards">
-        <div class="about-card">
-          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&fit=crop&round" alt="João V Ramos">
-          <h3>15+ Anos em TI & BI</h3>
-          <p><strong>Ciência da Computação + MBA Gestão de Projetos.</strong> Atuo de infra operacional (redes MikroTik, cloud, +200 usuários) ao estratégico (Power BI, dashboards executivos, automação de dados).</p>
-        </div>
-        <div class="about-card">
-          <h3>Expertise Principal</h3>
-          <ul>
-            <li><strong>Infra/Redes/Cloud:</strong> MikroTik RouterOS, VLANs, failover, FinOps, migração on-prem</li>
-            <li><strong>BI & Analytics:</strong> Power BI (DAX, modelagem), SQL analítico, Excel Power Query</li>
-            <li><strong>Projetos reais:</strong> Dashboard VPN (D-1), Financeiro Operacional, Portfolio Cafeteria completa</li>
-            <li><strong>Negócios Digitais:</strong> Sites bilíngues, Google Ads, funil de vendas data-driven</li>
-          </ul>
-        </div>
-        <div class="about-card">
-          <h3>Diferencial</h3>
-          <p><strong>Visão 360°:</strong> Integro infra crítica + dados estratégicos + resultados de negócio. Atuo no operacional (suporte N3) e consultoria (dashboards executivos). Foco em soluções escaláveis para indústria, varejo e digital.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact-section" id="contato">
-    <div class="container">
-      <h2 class="section-title">Vamos conversar sobre seu projeto</h2>
-      <p style="text-align:center; font-size:1.1rem; color:#666;">Precisa de dashboards, análise de dados ou automação? Descreva seu desafio.</p>
-      <form action="https://formsubmit.co/seu-email@exemplo.com" method="POST">
-        <input type="text" name="nome" placeholder="Seu nome" required>
-        <input type="email" name="email" placeholder="Seu e-mail profissional" required>
-        <input type="text" name="empresa" placeholder="Empresa/Setor">
-        <textarea name="mensagem" rows="4" placeholder="Qual desafio com dados você quer resolver?"></textarea>
-        <button type="submit">Enviar Mensagem</button>
-      </form>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 JVR Consultoria & BI. Transformando dados em estratégia.</p>
-      <div class="footer-links">
-        <a href="https://linkedin.com/in/joaovramos">LinkedIn</a>
-        <a href="https://github.com/joaovramos">GitHub</a>
-        <a href="mailto:contato@joaovramos.com">contato@joaovramos.com</a>
-      </div>
-      <div class="footer-contact">Recife, PE | WhatsApp: (81) 99999-9999</div>
-    </div>
-  </footer>
-
-</body>
-</html>
+      <div class="header-text">
+        <h1>JVR Consultoria em TI & Data
