@@ -6,248 +6,202 @@
   <title>JVR Consultoria — Infra & Data BI</title>
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
-    body { 
-      font-family:'Segoe UI',Arial,sans-serif; 
-      background:#f3f6fa; 
-      color:#30395c; 
-      line-height:1.6; 
-    }
+    body { font-family:'Segoe UI',Arial,sans-serif; background:#f3f6fa; color:#30395c; line-height:1.6; }
     
-    header {
-      background: linear-gradient(90deg, #1b77c2 65%, #42c3e5 100%);
-      color: #fff; 
-      padding: 30px 20px; 
-    }
-    .header-container {
-      max-width: 1200px; 
-      margin: 0 auto; 
-      display: flex; 
-      align-items: center; 
-      justify-content: space-between; 
-      flex-wrap: wrap; 
-      gap: 20px;
-    }
-    .logo-section img {
-      height: 80px; 
-      width: auto; 
-      max-width: 250px; 
-    }
-    .header-text {
-      flex: 1; 
-      text-align: center;
-    }
-    .header-text h1 { 
-      font-size: 2.5rem; 
-      font-weight: 700; 
-      margin-bottom: 8px; 
-    }
-    .header-text p { 
-      font-size: 1.2rem; 
-    }
-    .cta-header {
-      background: white; 
-      color: #1b77c2; 
-      border: none; 
-      font-weight: 600; 
-      border-radius: 25px; 
-      padding: 14px 35px; 
-      font-size: 1.1rem; 
-      cursor: pointer; 
-    }
-    .cta-header:hover { 
-      background: #1b77c2; 
-      color: white; 
-    }
+    header { background: linear-gradient(90deg, #1b77c2 65%, #42c3e5 100%); color: #fff; padding: 30px 20px; }
+    .header-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+    .logo-section img { height: 80px; width: auto; max-width: 250px; }
+    .header-text { flex: 1; text-align: center; }
+    .header-text h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 8px; }
+    .header-text p { font-size: 1.2rem; }
+    .cta-header { background: white; color: #1b77c2; border: none; font-weight: 600; border-radius: 25px; padding: 14px 35px; font-size: 1.1rem; cursor: pointer; }
+    .cta-header:hover { background: #1b77c2; color: white; }
 
-    .section {
-      background: white; 
-      border-radius: 20px; 
-      box-shadow: 0 8px 30px rgba(0,30,70,0.12); 
-      padding: 40px 30px; 
-      margin: 40px auto; 
-      max-width: 1100px;
-    }
-    .section-title { 
-      font-size: 2rem; 
-      color: #1b77c2; 
-      font-weight: 600; 
-      margin-bottom: 30px; 
-      text-align: center; 
-    }
+    .section { background: white; border-radius: 20px; box-shadow: 0 8px 30px rgba(0,30,70,0.12); padding: 40px 30px; margin: 40px auto; max-width: 1100px; }
+    .section-title { font-size: 2rem; color: #1b77c2; font-weight: 600; margin-bottom: 30px; text-align: center; }
 
-    .cards-grid {
-      display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-      gap: 25px; 
-      margin-top: 30px;
-    }
-    .card {
-      background: #f8fbff; 
-      border-radius: 15px; 
-      padding: 25px; 
-      text-align: center; 
-      box-shadow: 0 5px 20px rgba(0,30,70,0.1);
-    }
-    .card img { 
-      width: 100%; 
-      height: 180px; 
-      object-fit: cover; 
-      border-radius: 12px; 
-      margin-bottom: 15px; 
-    }
-    .card h3 { 
-      color: #1b77c2; 
-      font-size: 1.3rem; 
-      margin-bottom: 10px; 
-    }
-    .card p { 
-      color: #555; 
-    }
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 30px; }
+    .card { background: #f8fbff; border-radius: 15px; padding: 25px; text-align: center; box-shadow: 0 5px 20px rgba(0,30,70,0.1); }
+    .card img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; margin-bottom: 15px; }
+    .card h3 { color: #1b77c2; font-size: 1.3rem; margin-bottom: 10px; }
+    .card p { color: #555; }
 
-    .cases-grid { 
-      display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-      gap: 30px; 
-      margin-top: 30px; 
-    }
-    .case-card img { 
-      height: 220px !important; 
-    }
-    .case-cta {
-      display: inline-block; 
-      margin-top: 15px; 
-      background: #1b77c2; 
-      color: white; 
-      padding: 12px 28px; 
-      border-radius: 25px; 
-      text-decoration: none; 
-      font-weight: 600; 
-    }
+    .cases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 30px; }
+    .case-card img { height: 220px !important; }
+    .case-cta { display: inline-block; margin-top: 15px; background: #1b77c2; color: white; padding: 12px 28px; border-radius: 25px; text-decoration: none; font-weight: 600; }
+    .case-cta:hover { background: #42c3e5; }
 
-    .about-grid { 
-      display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-      gap: 25px; 
-    }
-    .about-card ul { 
-      text-align: left; 
-      padding-left: 20px; 
-      color: #555; 
-    }
+    .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+    .about-card img { width: 90px; height: 90px; border-radius: 50%; margin-bottom: 15px; }
+    .about-card ul { text-align: left; padding-left: 20px; color: #555; }
+    .about-card li { margin-bottom: 8px; }
 
-    .form-container { 
-      max-width: 500px; 
-      margin: 0 auto; 
-    }
-    .form-group input, 
-    .form-group textarea {
-      width: 100%; 
-      margin: 15px 0; 
-      padding: 15px; 
-      border: 2px solid #e1e8f0; 
-      border-radius: 12px; 
-      font-size: 1.05rem; 
-    }
-    .form-btn {
-      background: #1b77c2; 
-      color: white; 
-      border: none; 
-      padding: 16px 40px; 
-      border-radius: 25px; 
-      font-size: 1.15rem; 
-      font-weight: 600; 
-      cursor: pointer; 
-      width: 100%; 
-    }
+    .form-container { max-width: 500px; margin: 0 auto; }
+    .form-group input, .form-group textarea { width: 100%; margin: 15px 0; padding: 15px; border: 2px solid #e1e8f0; border-radius: 12px; font-size: 1.05rem; }
+    .form-btn { background: #1b77c2; color: white; border: none; padding: 16px 40px; border-radius: 25px; font-size: 1.15rem; font-weight: 600; cursor: pointer; width: 100%; }
 
-    footer { 
-      background: #1b77c2; 
-      color: white; 
-      text-align: center; 
-      padding: 40px 20px; 
-    }
-    .footer-links a { 
-      color: white; 
-      margin: 0 15px; 
-      text-decoration: none; 
-    }
+    footer { background: #1b77c2; color: white; text-align: center; padding: 40px 20px; }
+    .footer-links a { color: white; margin: 0 15px; text-decoration: none; }
 
-    @media (max-width: 768px) {
-      .header-container { flex-direction: column; text-align: center; }
-      .header-text h1 { font-size: 2rem; }
-    }
+    @media (max-width: 768px) { .header-container { flex-direction: column; text-align: center; } .header-text h1 { font-size: 2rem; } }
   </style>
 </head>
 <body>
 
+  <!-- HEADER -->
   <header>
     <div class="header-container">
       <div class="logo-section">
-        <img src="Logo-JVR-Consultoria.jpg" alt="JVR Logo">
+        <img src="Logo-JVR-Consultoria.jpg" alt="JVR TI & Data BI">
       </div>
       <div class="header-text">
-        <h1>JVR Consultoria TI & BI</h1>
-        <p>Infraestrutura + Dados = Resultados</p>
+        <h1>JVR Consultoria em TI & Data BI</h1>
+        <p>Infraestrutura de TI + Análise de Dados = Resultados Estratégicos</p>
       </div>
-      <button class="cta-header" onclick="document.getElementById('contato').scrollIntoView()">
-        Fale Conosco
+      <button class="cta-header" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">
+        Entre em Contato
       </button>
     </div>
   </header>
 
+  <!-- PROBLEMA -->
   <section class="section">
-    <h2 class="section-title">Infra + Dados Integrados</h2>
+    <h2 class="section-title">O problema que você enfrenta</h2>
     <p style="text-align:center; font-size:1.1rem; color:#666; max-width:800px; margin:0 auto;">
-      Da manutenção de servidores e redes até dashboards executivos
+      Empresas lidam com redes complexas, CFTV espalhado, servidores críticos e dados fragmentados. 
+      A JVR conecta infraestrutura estável com análise inteligente.
     </p>
   </section>
 
+  <!-- DIFERENCIAL -->
   <section class="section">
-    <h2 class="section-title">Soluções Práticas</h2>
+    <h2 class="section-title">Nosso diferencial</h2>
+    <p style="text-align:center; font-size:1.1rem; color:#666; margin-bottom:40px;">
+      Unimos experiência prática em CPD, redes, segurança e CFTV com projetos de BI
+    </p>
     <div class="cards-grid">
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400" alt="Financeiro">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&fit=crop" alt="Financeiro">
         <h3>Financeiro</h3>
-        <p>Contas a pagar/receber, fluxo de caixa</p>
+        <p><strong>Contas a Pagar/Receber</strong><br>Fluxo de caixa, despesas, centros de custo</p>
       </div>
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400" alt="RH">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&fit=crop" alt="RH">
         <h3>RH</h3>
-        <p>Mapa de funcionários, turnover</p>
+        <p><strong>Mapa de Funcionários</strong><br>Turnover, absenteísmo, produtividade por área</p>
       </div>
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400" alt="Telefonia">
+        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&fit=crop" alt="Logística">
+        <h3>Logística</h3>
+        <p><strong>Estoque e Giro</strong><br>Custos operacionais e nível de serviço</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&fit=crop" alt="Telefonia">
         <h3>Telefonia</h3>
-        <p>ETL Claro, consumo por linha</p>
+        <p><strong>ETL Claro</strong><br>Consumo, linhas ociosas, otimização de custos</p>
       </div>
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?w=400" alt="Acesso">
+        <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?w=400&fit=crop" alt="Acesso">
         <h3>Controle de Acesso</h3>
-        <p>Control ID, horários críticos</p>
+        <p><strong>Control ID</strong><br>Coleta e análise de acessos, horários críticos</p>
       </div>
     </div>
   </section>
 
+  <!-- CASOS DE USO -->
+  <section class="section" id="portfolio">
+    <h2 class="section-title">Casos de Uso (Exemplos)</h2>
+    <p style="text-align:center; font-size:1.1rem; color:#666; margin-bottom:40px;">
+      Painéis com dados anonimizados. Entre em contato para análise da sua necessidade.
+    </p>
+    <div class="cases-grid">
+      <div class="case-card card">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&fit=crop" alt="Financeiro">
+        <h3>Financeiro Indústria</h3>
+        <p>Propostas vs executadas, desvios item a item</p>
+        <a href="#contato" class="case-cta" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">Entre em contato</a>
+      </div>
+      <div class="case-card card">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&fit=crop" alt="Cafeteria">
+        <h3>Portfólio Cafeteria</h3>
+        <p>Vendas, fornecedores, indicadores completos</p>
+        <a href="#contato" class="case-cta" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">Entre em contato</a>
+      </div>
+      <div class="case-card card">
+        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=500&fit=crop" alt="Telefonia">
+        <h3>Telefonia Corporativa</h3>
+        <p>Consolidação arquivos Claro por centro de custo</p>
+        <a href="#contato" class="case-cta" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">Entre em contato</a>
+      </div>
+      <div class="case-card card">
+        <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?w=500&fit=crop" alt="Acesso">
+        <h3>Controle de Acesso</h3>
+        <p>Análise Control ID + apontamento de horas</p>
+        <a href="#contato" class="case-cta" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">Entre em contato</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="section">
+    <h2 class="section-title">Sobre João V. Ramos</h2>
+    <div class="about-grid">
+      <div class="about-card card">
+        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=90&fit=crop&round" alt="João V Ramos">
+        <h3>15+ Anos em Infra & BI</h3>
+        <p><strong>Ciência da Computação + MBA Gestão de Projetos</strong><br>
+        Infraestrutura operacional + gestão de time + análise estratégica de dados</p>
+      </div>
+      <div class="about-card card">
+        <h3>Infraestrutura & Redes</h3>
+        <ul>
+          <li><strong>Segurança:</strong> Fortigate (2unid), firewalls</li>
+          <li><strong>Wireless:</strong> 47 FortiAPs conectados</li>
+          <li><strong>Switches:</strong> Cisco, Dell, HP/Aruba, Intelbras</li>
+          <li><strong>Virtualização:</strong> VMware, Hyper-V, backup Veeam</li>
+          <li><strong>CFTV:</strong> Migração analógico→IP (Hikvision/Intelbras)</li>
+        </ul>
+      </div>
+      <div class="about-card card">
+        <h3>Gestão & Data BI</h3>
+        <ul>
+          <li><strong>Power BI:</strong> DAX, modelagem, dashboards executivos</li>
+          <li><strong>Gestão TI:</strong> Liderança time infra, contratos, contas TI</li>
+          <li><strong>Projetos:</strong> Expansão/reformas salas, cabeamento, CPD</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
   <section class="section" id="contato">
-    <h2 class="section-title">Seu Projeto</h2>
-    <form class="form-container" action="https://formsubmit.co/seu-email@gmail.com" method="POST">
+    <h2 class="section-title">Vamos conversar sobre seu ambiente</h2>
+    <p style="text-align:center; font-size:1.1rem; color:#666; margin-bottom:30px;">
+      Descreva seu cenário atual de TI e principal desafio
+    </p>
+    <form class="form-container" action="https://formsubmit.co/seu-email@exemplo.com" method="POST">
       <div class="form-group">
-        <input type="text" name="nome" placeholder="Nome" required>
-        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="nome" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu e-mail profissional" required>
+        <input type="text" name="empresa" placeholder="Empresa/Setor">
       </div>
       <div class="form-group">
-        <textarea name="mensagem" rows="4" placeholder="Seu desafio..."></textarea>
+        <textarea name="mensagem" rows="5" placeholder="Cenário atual e principal desafio..."></textarea>
       </div>
-      <button type="submit" class="form-btn">Enviar</button>
+      <button type="submit" class="form-btn">Enviar Mensagem</button>
     </form>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <p>JVR Consultoria © 2025 | Recife PE</p>
+    <p>&copy; 2025 JVR Consultoria em TI & Data BI</p>
     <div class="footer-links">
-      <a href="#">LinkedIn</a>
-      <a href="#">WhatsApp</a>
+      <a href="https://linkedin.com/in/joaovramos">LinkedIn</a>
+      <a href="https://github.com/joaovramos">GitHub</a>
+      <a href="mailto:contato@joaovramos.com">contato@joaovramos.com</a>
+      <a href="tel:+5581999999999">WhatsApp</a>
     </div>
+    <p>Recife, PE</p>
   </footer>
 
 </body>
