@@ -24,12 +24,12 @@
     }
     .cta-btn:hover {background:#1b77c2; color:#fff;}
     .img-row, .case-row {display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:14px;}
-    .img-box, .case-box, .focus-box {
+    .img-box, .case-box {
       background:#f4f6fb; border-radius:13px; padding:11px; flex:1 1 230px; min-width:240px; text-align:center; 
       box-shadow:0 1px 7px rgba(0,30,70,0.09); transition:.2s;
     }
     .img-box:hover, .case-box:hover { transform:translateY(-3px); }
-    .img-box img, .case-box img, .focus-box img {width:100%; max-width:260px; height:135px; object-fit:cover; border-radius:9px;}
+    .img-box img, .case-box img {width:100%; max-width:260px; height:135px; object-fit:cover; border-radius:9px;}
     .case-box a {display:block; margin-top:8px; font-weight:600; color:#1b77c2; text-decoration:none;}
     .case-box a:hover {color:#42c3e5;}
     /* SOBRE */
@@ -62,7 +62,7 @@
       <h1>JVR Consultoria & BI</h1>
       <p><strong>Dados são seu maior patrimônio competitivo.</strong> Obtenha análises estratégicas, dashboards personalizados em Power BI e suporte expert desde o diagnóstico até resultados práticos.</p>
       <button class="cta-btn" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">
-        Agende uma Demonstração
+        Entre em Contato
       </button>
     </div>
   </header>
@@ -93,6 +93,14 @@
           <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&fit=crop" alt="Dashboard Logística Power BI">
           <p><strong>Logística</strong><br>Estoque, giro e custos em tempo real</p>
         </div>
+        <div class="img-box">
+          <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&fit=crop" alt="Dashboard Telefonia Power BI">
+          <p><strong>Telefonia</strong><br>ETL Claro, consumo, insights operacionais</p>
+        </div>
+        <div class="img-box">
+          <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?w=400&fit=crop" alt="Dashboard Control ID Power BI">
+          <p><strong>Control ID</strong><br>Coleta e análise de acessos</p>
+        </div>
       </div>
     </div>
   </section>
@@ -100,34 +108,30 @@
   <section class="cases-section" id="portfolio">
     <div class="container">
       <h2 class="section-title">Portfólio — Exemplos reais</h2>
-      <p>Veja dashboards completos desenvolvidos para diferentes setores:</p>
+      <p>Veja dashboards completos desenvolvidos para diferentes setores. <strong>Envie mensagem para acesso aos painéis completos.</strong></p>
       
       <div class="case-row">
         <div class="case-box">
-          <img src="https://i.ibb.co/7rZ3jYk/dashboard-financeiro.jpg" alt="Dashboard Financeiro Indústria">
-          <p><strong>Financeiro para Indústria</strong></p>
-          <a href="https://app.powerbi.com/view?r=eyJrIjoi..." target="_blank">Ver painel completo →</a>
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&fit=crop" alt="Dashboard Financeiro Indústria">
+          <p><strong>Financeiro para Indústria</strong><br>Propostas x Executadas, desvios item a item</p>
+          <a href="#contato" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">Solicitar acesso →</a>
         </div>
         <div class="case-box">
-          <img src="https://i.ibb.co/0mQb0mP/vendas-multicanal.jpg" alt="Dashboard Vendas Multicanal">
-          <p><strong>Vendas Multicanal</strong></p>
-          <a href="https://app.powerbi.com/view?r=eyJrIjoi..." target="_blank">Ver painel completo →</a>
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&fit=crop" alt="Dashboard Vendas Multicanal">
+          <p><strong>Vendas Multicanal</strong><br>Portfolio Cafeteria completa (vendas, fornecedores, indicadores)</p>
+          <a href="#contato" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">Solicitar acesso →</a>
+        </div>
+        <div class="case-box">
+          <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&fit=crop" alt="Dashboard Telefonia Claro">
+          <p><strong>Telefonia Corporativa</strong><br>ETL arquivos Claro, consumo e insights</p>
+          <a href="#contato" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">Solicitar acesso →</a>
+        </div>
+        <div class="case-box">
+          <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?w=400&fit=crop" alt="Dashboard Control ID">
+          <p><strong>Control ID</strong><br>Acessos VPN D-1, apontamento de horas</p>
+          <a href="#contato" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">Solicitar acesso →</a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="focus-section">
-    <div class="container">
-      <h2 class="section-title">Painel de Controle Premium</h2>
-      <div style="text-align:center;">
-        <div class="focus-box">
-          <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?w=400&fit=crop" alt="Painel Controle Power BI">
-          <p><strong>Control ID</strong><br>Gestão operacional e indicadores-chave em tempo real</p>
-          <a href="#" class="cta-btn" style="margin-top:12px;">Visualizar agora</a>
-        </div>
-      </div>
-      <p style="text-align:center; margin-top:20px;">Painéis interativos, simuladores de cenário e insights acionáveis para cada etapa da sua operação.</p>
     </div>
   </section>
 
@@ -159,14 +163,14 @@
 
   <section class="contact-section" id="contato">
     <div class="container">
-      <h2 class="section-title">Agende sua Demonstração</h2>
-      <p style="text-align:center; font-size:1.1rem; color:#666;">Em 15 minutos mostro como seus dados podem gerar resultados imediatos.</p>
+      <h2 class="section-title">Vamos conversar sobre seu projeto</h2>
+      <p style="text-align:center; font-size:1.1rem; color:#666;">Precisa de dashboards, análise de dados ou automação? Descreva seu desafio.</p>
       <form action="https://formsubmit.co/seu-email@exemplo.com" method="POST">
         <input type="text" name="nome" placeholder="Seu nome" required>
         <input type="email" name="email" placeholder="Seu e-mail profissional" required>
         <input type="text" name="empresa" placeholder="Empresa/Setor">
         <textarea name="mensagem" rows="4" placeholder="Qual desafio com dados você quer resolver?"></textarea>
-        <button type="submit">Agendar Demonstração Gratuita</button>
+        <button type="submit">Enviar Mensagem</button>
       </form>
     </div>
   </section>
