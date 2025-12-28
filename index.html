@@ -4,63 +4,251 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JVR Consultoria — Infra & Data BI</title>
-  <meta name="description" content="Consultoria em Infraestrutura de TI, Segurança de Rede, CFTV e Data BI com Power BI. Da operação ao nível estratégico.">
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:'Segoe UI',Arial,sans-serif; background:#f3f6fa; color:#30395c; line-height:1.6; }
+    body { 
+      font-family:'Segoe UI',Arial,sans-serif; 
+      background:#f3f6fa; 
+      color:#30395c; 
+      line-height:1.6; 
+    }
     
-    /* HEADER COM LOGO GRANDE */
     header {
       background: linear-gradient(90deg, #1b77c2 65%, #42c3e5 100%);
-      color: #fff; padding: 30px 20px; position:relative;
+      color: #fff; 
+      padding: 30px 20px; 
     }
     .header-container {
-      max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;
+      max-width: 1200px; 
+      margin: 0 auto; 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      flex-wrap: wrap; 
+      gap: 20px;
     }
     .logo-section img {
-      height: 80px; width: auto; max-width: 250px; object-fit: contain;
+      height: 80px; 
+      width: auto; 
+      max-width: 250px; 
     }
     .header-text {
-      flex: 1; text-align: center;
+      flex: 1; 
+      text-align: center;
     }
     .header-text h1 { 
-      font-size: 2.5rem; font-weight: 700; margin-bottom: 8px; 
+      font-size: 2.5rem; 
+      font-weight: 700; 
+      margin-bottom: 8px; 
     }
     .header-text p { 
-      font-size: 1.2rem; opacity: 0.95; 
+      font-size: 1.2rem; 
     }
     .cta-header {
-      background: rgba(255,255,255,0.95); color: #1b77c2; border: none; 
-      font-weight: 600; border-radius: 25px; padding: 14px 35px; 
-      font-size: 1.1rem; cursor: pointer; transition: all 0.3s; 
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      background: white; 
+      color: #1b77c2; 
+      border: none; 
+      font-weight: 600; 
+      border-radius: 25px; 
+      padding: 14px 35px; 
+      font-size: 1.1rem; 
+      cursor: pointer; 
     }
     .cta-header:hover { 
-      background: #1b77c2; color: white; transform: translateY(-2px); 
+      background: #1b77c2; 
+      color: white; 
     }
 
-    /* SEÇÕES */
     .section {
-      background: white; border-radius: 20px; box-shadow: 0 8px 30px rgba(0,30,70,0.12); 
-      padding: 40px 30px; margin: 40px auto; max-width: 1100px;
+      background: white; 
+      border-radius: 20px; 
+      box-shadow: 0 8px 30px rgba(0,30,70,0.12); 
+      padding: 40px 30px; 
+      margin: 40px auto; 
+      max-width: 1100px;
     }
     .section-title { 
-      font-size: 2rem; color: #1b77c2; font-weight: 600; 
-      margin-bottom: 30px; text-align: center; 
+      font-size: 2rem; 
+      color: #1b77c2; 
+      font-weight: 600; 
+      margin-bottom: 30px; 
+      text-align: center; 
     }
 
-    /* CARDS DIFERENCIAL */
     .cards-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-      gap: 25px; margin-top: 30px;
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+      gap: 25px; 
+      margin-top: 30px;
     }
     .card {
-      background: #f8fbff; border-radius: 15px; padding: 25px; text-align: center; 
-      box-shadow: 0 5px 20px rgba(0,30,70,0.1); transition: all 0.3s;
-      border: 1px solid rgba(27,119,194,0.1);
-    }
-    .card:hover { 
-      transform: translateY(-8px); box-shadow: 0 15px 40px rgba(0,30,70,0.2); 
+      background: #f8fbff; 
+      border-radius: 15px; 
+      padding: 25px; 
+      text-align: center; 
+      box-shadow: 0 5px 20px rgba(0,30,70,0.1);
     }
     .card img { 
-      width
+      width: 100%; 
+      height: 180px; 
+      object-fit: cover; 
+      border-radius: 12px; 
+      margin-bottom: 15px; 
+    }
+    .card h3 { 
+      color: #1b77c2; 
+      font-size: 1.3rem; 
+      margin-bottom: 10px; 
+    }
+    .card p { 
+      color: #555; 
+    }
+
+    .cases-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+      gap: 30px; 
+      margin-top: 30px; 
+    }
+    .case-card img { 
+      height: 220px !important; 
+    }
+    .case-cta {
+      display: inline-block; 
+      margin-top: 15px; 
+      background: #1b77c2; 
+      color: white; 
+      padding: 12px 28px; 
+      border-radius: 25px; 
+      text-decoration: none; 
+      font-weight: 600; 
+    }
+
+    .about-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+      gap: 25px; 
+    }
+    .about-card ul { 
+      text-align: left; 
+      padding-left: 20px; 
+      color: #555; 
+    }
+
+    .form-container { 
+      max-width: 500px; 
+      margin: 0 auto; 
+    }
+    .form-group input, 
+    .form-group textarea {
+      width: 100%; 
+      margin: 15px 0; 
+      padding: 15px; 
+      border: 2px solid #e1e8f0; 
+      border-radius: 12px; 
+      font-size: 1.05rem; 
+    }
+    .form-btn {
+      background: #1b77c2; 
+      color: white; 
+      border: none; 
+      padding: 16px 40px; 
+      border-radius: 25px; 
+      font-size: 1.15rem; 
+      font-weight: 600; 
+      cursor: pointer; 
+      width: 100%; 
+    }
+
+    footer { 
+      background: #1b77c2; 
+      color: white; 
+      text-align: center; 
+      padding: 40px 20px; 
+    }
+    .footer-links a { 
+      color: white; 
+      margin: 0 15px; 
+      text-decoration: none; 
+    }
+
+    @media (max-width: 768px) {
+      .header-container { flex-direction: column; text-align: center; }
+      .header-text h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="logo-section">
+        <img src="Logo-JVR-Consultoria.jpg" alt="JVR Logo">
+      </div>
+      <div class="header-text">
+        <h1>JVR Consultoria TI & BI</h1>
+        <p>Infraestrutura + Dados = Resultados</p>
+      </div>
+      <button class="cta-header" onclick="document.getElementById('contato').scrollIntoView()">
+        Fale Conosco
+      </button>
+    </div>
+  </header>
+
+  <section class="section">
+    <h2 class="section-title">Infra + Dados Integrados</h2>
+    <p style="text-align:center; font-size:1.1rem; color:#666; max-width:800px; margin:0 auto;">
+      Da manutenção de servidores e redes até dashboards executivos
+    </p>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Soluções Práticas</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400" alt="Financeiro">
+        <h3>Financeiro</h3>
+        <p>Contas a pagar/receber, fluxo de caixa</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400" alt="RH">
+        <h3>RH</h3>
+        <p>Mapa de funcionários, turnover</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400" alt="Telefonia">
+        <h3>Telefonia</h3>
+        <p>ETL Claro, consumo por linha</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?w=400" alt="Acesso">
+        <h3>Controle de Acesso</h3>
+        <p>Control ID, horários críticos</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contato">
+    <h2 class="section-title">Seu Projeto</h2>
+    <form class="form-container" action="https://formsubmit.co/seu-email@gmail.com" method="POST">
+      <div class="form-group">
+        <input type="text" name="nome" placeholder="Nome" required>
+        <input type="email" name="email" placeholder="Email" required>
+      </div>
+      <div class="form-group">
+        <textarea name="mensagem" rows="4" placeholder="Seu desafio..."></textarea>
+      </div>
+      <button type="submit" class="form-btn">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>JVR Consultoria © 2025 | Recife PE</p>
+    <div class="footer-links">
+      <a href="#">LinkedIn</a>
+      <a href="#">WhatsApp</a>
+    </div>
+  </footer>
+
+</body>
+</html>
