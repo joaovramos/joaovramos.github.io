@@ -30,15 +30,9 @@
       gap:20px;
     }
 
-    .logo-section img {
-      height:80px;
-      max-width:250px;
-    }
+    .logo-section img { height:80px; max-width:250px; }
 
-    .header-text {
-      flex:1;
-      text-align:center;
-    }
+    .header-text { flex:1; text-align:center; }
 
     .header-text h1 {
       font-size:2.5rem;
@@ -46,9 +40,7 @@
       margin-bottom:8px;
     }
 
-    .header-text p {
-      font-size:1.2rem;
-    }
+    .header-text p { font-size:1.2rem; }
 
     .cta-header {
       background:#fff;
@@ -79,13 +71,14 @@
       font-size:2rem;
       color:#1b77c2;
       font-weight:600;
-      margin-bottom:30px;
+      margin-bottom:25px;
       text-align:center;
     }
 
-    .cards-grid {
+    .cards-grid,
+    .cases-grid {
       display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+      grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
       gap:25px;
       margin-top:30px;
     }
@@ -96,6 +89,7 @@
       padding:25px;
       text-align:center;
       box-shadow:0 5px 20px rgba(0,30,70,0.1);
+      position:relative;
     }
 
     .card img {
@@ -106,62 +100,34 @@
       margin-bottom:15px;
     }
 
-    .card h3 {
-      color:#1b77c2;
-      font-size:1.3rem;
-      margin-bottom:10px;
+    .badge {
+      position:absolute;
+      top:15px;
+      left:15px;
+      background:#1b77c2;
+      color:#fff;
+      padding:6px 12px;
+      font-size:0.8rem;
+      border-radius:20px;
+      font-weight:600;
     }
 
-    .card p {
-      color:#555;
-    }
-
-    .cases-grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(320px,1fr));
-      gap:30px;
-      margin-top:30px;
-    }
-
-    .case-card img {
-      height:220px;
-    }
+    .card h3 { color:#1b77c2; margin-bottom:10px; }
 
     .case-cta {
       display:inline-block;
       margin-top:15px;
       background:#1b77c2;
       color:#fff;
-      padding:12px 28px;
+      padding:12px 26px;
       border-radius:25px;
       text-decoration:none;
       font-weight:600;
     }
 
-    .case-cta:hover {
-      background:#42c3e5;
-    }
+    .case-cta:hover { background:#42c3e5; }
 
-    .about-grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(320px,1fr));
-      gap:25px;
-    }
-
-    .about-card ul {
-      text-align:left;
-      padding-left:20px;
-      color:#555;
-    }
-
-    .about-card li {
-      margin-bottom:8px;
-    }
-
-    .form-container {
-      max-width:500px;
-      margin:0 auto;
-    }
+    .form-container { max-width:500px; margin:0 auto; }
 
     .form-group input,
     .form-group textarea {
@@ -177,7 +143,7 @@
       background:#1b77c2;
       color:#fff;
       border:none;
-      padding:16px 40px;
+      padding:16px;
       border-radius:25px;
       font-size:1.15rem;
       font-weight:600;
@@ -192,12 +158,6 @@
       padding:40px 20px;
     }
 
-    .footer-links a {
-      color:#fff;
-      margin:0 15px;
-      text-decoration:none;
-    }
-
     @media (max-width:768px) {
       .header-container { flex-direction:column; }
       .header-text h1 { font-size:2rem; }
@@ -207,149 +167,63 @@
 
 <body>
 
-<!-- HEADER -->
 <header>
   <div class="header-container">
     <div class="logo-section">
       <img src="Logo-JVR-Consultoria.jpg" alt="JVR Consultoria">
     </div>
-
     <div class="header-text">
       <h1>JVR Consultoria em Infra & Data BI</h1>
-      <p>Infraestrutura tecnológica + análise de dados aplicada ao negócio</p>
+      <p>Infraestrutura tecnológica integrada à análise de dados</p>
     </div>
-
     <button class="cta-header" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">
-      Entre em contato
+      Falar com especialista
     </button>
   </div>
 </header>
 
-<!-- PROBLEMA -->
-<section class="section">
-  <h2 class="section-title">O problema que você enfrenta</h2>
-  <p style="text-align:center; font-size:1.1rem; color:#666; max-width:900px; margin:0 auto;">
-    Empresas operam em ambientes cada vez mais complexos, com redes distribuídas, servidores críticos, sistemas de CFTV e controle de acesso descentralizados, além de dados espalhados em múltiplas fontes.
-    <br><br>
-    Essa fragmentação dificulta o controle, aumenta riscos operacionais e compromete a tomada de decisão.
-    <br><br>
-    A JVR elimina esses gargalos ao integrar uma infraestrutura tecnológica sólida, segura e escalável com análise de dados inteligente, transformando ambientes desconectados em operações confiáveis, integradas e orientadas a resultados.
-  </p>
-</section>
-
-<!-- DIFERENCIAL -->
-<section class="section">
-  <h2 class="section-title">Nosso diferencial</h2>
-  <p style="text-align:center; font-size:1.1rem; color:#666; margin-bottom:40px; max-width:900px; margin-left:auto; margin-right:auto;">
-    Unimos experiência prática em infraestrutura tecnológica crítica — redes, servidores, segurança, CFTV e controle de acesso — com Business Intelligence aplicado ao negócio.
-    <br><br>
-    O resultado é visibilidade real sobre custos, pessoas, operações e desempenho, permitindo decisões baseadas em dados integrados, confiáveis e atualizados.
-  </p>
-
-  <div class="cards-grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&fit=crop" alt="Financeiro">
-      <h3>Financeiro</h3>
-      <p>Fluxo de caixa, contas a pagar/receber e centros de custo</p>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&fit=crop" alt="RH">
-      <h3>RH</h3>
-      <p>Turnover, absenteísmo e produtividade por área</p>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&fit=crop" alt="Logística">
-      <h3>Logística</h3>
-      <p>Estoque, giro e eficiência operacional</p>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&fit=crop" alt="Telefonia">
-      <h3>Telefonia</h3>
-      <p>Consolidação de faturas e otimização de custos</p>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?w=400&fit=crop" alt="Controle de Acesso">
-      <h3>Controle de Acesso</h3>
-      <p>Análise de acessos e horários críticos</p>
-    </div>
-  </div>
-</section>
-
-<!-- CASOS DE USO -->
 <section class="section" id="portfolio">
-  <h2 class="section-title">Casos de Uso (Exemplos)</h2>
-  <p style="text-align:center; font-size:1.1rem; color:#666; margin-bottom:40px; max-width:900px; margin-left:auto; margin-right:auto;">
-    Dashboards totalmente funcionais, baseados em cenários reais de operação, com dados anonimizados e estruturados conforme boas práticas de governança.
-    <br><br>
-    O acesso ao painel interativo completo é liberado após o preenchimento do formulário.
+  <h2 class="section-title">Casos de Uso — Dashboards Demonstrativos</h2>
+  <p style="text-align:center; color:#666; max-width:850px; margin:0 auto 30px;">
+    Pré-visualizações reais de dashboards profissionais.  
+    O acesso completo ao painel interativo é liberado após o preenchimento do formulário.
   </p>
 
   <div class="cases-grid">
-    <div class="case-card card">
-      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&fit=crop" alt="Financeiro Indústria">
-      <h3>Financeiro – Indústria</h3>
-      <p>Propostas aprovadas vs executadas, com desvios financeiros</p>
-      <a href="#contato" class="case-cta">Acessar painel demonstrativo</a>
+    <div class="card">
+      <span class="badge">Preview</span>
+      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&fit=crop">
+      <h3>Financeiro — Indústria</h3>
+      <p>Propostas x executadas com análise de desvios.</p>
+      <a href="#contato" class="case-cta">Solicitar acesso ao painel</a>
     </div>
 
-    <div class="case-card card">
-      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&fit=crop" alt="Cafeteria">
-      <h3>Portfólio – Cafeteria</h3>
-      <p>Vendas, produtos e fornecedores</p>
-      <a href="#contato" class="case-cta">Acessar painel demonstrativo</a>
-    </div>
-
-    <div class="case-card card">
-      <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=500&fit=crop" alt="Telefonia Corporativa">
-      <h3>Telefonia Corporativa</h3>
-      <p>Consumo por centro de custo e linhas ociosas</p>
-      <a href="#contato" class="case-cta">Acessar painel demonstrativo</a>
-    </div>
-
-    <div class="case-card card">
-      <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?w=500&fit=crop" alt="Controle de Acesso">
-      <h3>Controle de Acesso</h3>
-      <p>Análise de acessos e apontamento de horas</p>
-      <a href="#contato" class="case-cta">Acessar painel demonstrativo</a>
+    <div class="card">
+      <span class="badge">Preview</span>
+      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&fit=crop">
+      <h3>Cafeteria — BI Operacional</h3>
+      <p>Vendas, produtos e fornecedores integrados.</p>
+      <a href="#contato" class="case-cta">Solicitar acesso ao painel</a>
     </div>
   </div>
 </section>
 
-<!-- CONTATO -->
 <section class="section" id="contato">
-  <h2 class="section-title">Vamos conversar sobre seu ambiente</h2>
-  <p style="text-align:center; font-size:1.1rem; color:#666; margin-bottom:30px;">
-    Descreva seu cenário atual e principal desafio
+  <h2 class="section-title">Solicite acesso ao painel demonstrativo</h2>
+  <p style="text-align:center; color:#666; margin-bottom:25px;">
+    Informe seus dados e receba o link de visualização.
   </p>
 
   <form class="form-container" action="https://formsubmit.co/seu-email@exemplo.com" method="POST">
-    <div class="form-group">
-      <input type="text" name="nome" placeholder="Seu nome" required>
-      <input type="email" name="email" placeholder="Seu e-mail profissional" required>
-      <input type="text" name="empresa" placeholder="Empresa / Setor">
-    </div>
-
-    <div class="form-group">
-      <textarea name="mensagem" rows="5" placeholder="Cenário atual e principal desafio"></textarea>
-    </div>
-
-    <button type="submit" class="form-btn">Enviar mensagem</button>
+    <input type="text" name="nome" placeholder="Seu nome" required>
+    <input type="email" name="email" placeholder="E-mail profissional" required>
+    <textarea name="mensagem" rows="4" placeholder="Qual área deseja analisar?"></textarea>
+    <button class="form-btn">Receber acesso</button>
   </form>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <p>&copy; 2025 JVR Consultoria em Infra & Data BI</p>
-  <div class="footer-links">
-    <a href="https://linkedin.com">LinkedIn</a>
-    <a href="https://github.com">GitHub</a>
-    <a href="mailto:contato@jvrconsultoria.com">contato@jvrconsultoria.com</a>
-  </div>
-  <p>Recife, PE</p>
+  <p>&copy; 2025 JVR Consultoria — Recife, PE</p>
 </footer>
 
 </body>
