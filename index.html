@@ -4,14 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfólio Técnico — João V. Ramos (Infra & Data BI)</title>
-  <meta name="description" content="Portfólio técnico de projetos em Infraestrutura de TI, Redes, CFTV e Data BI com Power BI, DAX, modelagem de dados e integração de múltiplas fontes.">
+  <meta name="description" content="Portfólio técnico de João V. Ramos com projetos em Infraestrutura de TI, Redes, CFTV, governança de dados e Business Intelligence com Power BI, voltado a estudos de caso e desenvolvimento de carreira.">
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
     body { font-family:'Segoe UI',Arial,sans-serif; background:#f3f6fa; color:#30395c; line-height:1.6; }
 
     header { background: linear-gradient(90deg, #1b77c2 65%, #42c3e5 100%); color:#fff; padding:30px 20px; }
     .header-container { max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px; }
-    .logo-section img { height:80px; width:auto; max-width:250px; }
+    /* Logo removida para evitar referência visual a "Consultoria"
+       Arquivo original: Logo-JVR-Consultoria.jpg (legado visual apenas) */
     .header-text { flex:1; text-align:center; }
     .header-text h1 { font-size:2.3rem; font-weight:700; margin-bottom:8px; }
     .header-text p { font-size:1.1rem; max-width:620px; margin:0 auto; }
@@ -38,7 +39,17 @@
     .case-meta { font-size:0.9rem; color:#666; margin-top:8px; }
     .case-meta strong { color:#1b77c2; }
 
-    .case-cta { display:inline-block; margin-top:12px; background:#1b77c2; color:#fff; padding:10px 24px; border-radius:20px; text-decoration:none; font-weight:600; font-size:0.95rem; }
+    .case-cta {
+      display:inline-block;
+      margin-top:12px;
+      background:#1b77c2;
+      color:#fff;
+      padding:10px 24px;
+      border-radius:20px;
+      text-decoration:none;
+      font-weight:600;
+      font-size:0.95rem;
+    }
     .case-cta:hover { background:#42c3e5; }
 
     .form-container { max-width:500px; margin:0 auto; }
@@ -46,14 +57,46 @@
     .form-btn { background:#1b77c2; color:white; border:none; padding:14px 36px; border-radius:24px; font-size:1.05rem; font-weight:600; cursor:pointer; width:100%; }
     .form-btn:hover { background:#42c3e5; }
 
-    .about-card img { width:80px; height:80px; border-radius:50%; margin-bottom:10px; }
+    .about-card img { width:80px; height:80px; border-radius:50%; margin-bottom:10px; object-fit:cover; }
+
+    .downloads-grid .download-card a { color:#1b77c2; text-decoration:none; font-weight:600; }
+
+    .projects-header {
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+    .projects-header-text {
+      flex:1;
+      text-align:center;
+    }
+    .projects-header-actions {
+      min-width:220px;
+      text-align:right;
+    }
+    .projects-btn {
+      background:#1b77c2;
+      color:#fff;
+      border:none;
+      padding:10px 26px;
+      border-radius:22px;
+      font-weight:600;
+      font-size:0.95rem;
+      cursor:pointer;
+    }
+    .projects-btn:hover { background:#42c3e5; }
 
     footer { background:#1b77c2; color:#fff; text-align:center; padding:30px 20px; margin-top:40px; }
     .footer-links a { color:#fff; margin:0 12px; text-decoration:none; font-weight:600; font-size:0.95rem; }
+    .footer-note { font-size:0.85rem; opacity:0.9; margin-top:8px; }
 
     @media (max-width:768px) {
       .header-container { flex-direction:column; text-align:center; }
       .header-text h1 { font-size:1.9rem; }
+      .projects-header { flex-direction:column; align-items:center; }
+      .projects-header-actions { text-align:center; }
     }
   </style>
 </head>
@@ -62,9 +105,6 @@
   <!-- HEADER / INTRO PORTFÓLIO -->
   <header>
     <div class="header-container">
-      <div class="logo-section">
-        <img src="Logo-JVR-Consultoria.jpg" alt="Logo JVR">
-      </div>
       <div class="header-text">
         <h1>Portfólio Técnico de Soluções em TI e Data BI</h1>
         <p>Este site apresenta projetos técnicos e estudos de caso em Infraestrutura de TI, Redes, CFTV e Análise de Dados com Power BI, utilizando dados simulados ou públicos, exclusivamente para fins demonstrativos e educacionais.</p>
@@ -75,7 +115,7 @@
     </div>
   </header>
 
-  <!-- RESUMO PROFISSIONAL / HEADLINE PESSOAL -->
+  <!-- RESUMO PROFISSIONAL -->
   <section class="section">
     <h2 class="section-title">João V. Ramos</h2>
     <p class="section-subtitle">Infraestrutura crítica, dados e decisões orientadas a resultado</p>
@@ -106,9 +146,9 @@
         <h3>Infraestrutura & Redes</h3>
         <ul>
           <li>Segurança de rede com FortiGate, políticas de firewall e VPN</li>
-          <li>Redes Wi-Fi corporativas com Access Points gerenciados</li>
+          <li>Redes Wi‑Fi corporativas com Access Points gerenciados</li>
           <li>Switching com Cisco, Dell, HP/Aruba e Intelbras</li>
-          <li>Segmentação de redes, VLANs e ambientes multi-SSID</li>
+          <li>Segmentação de redes, VLANs e ambientes multi‑SSID</li>
           <li>Ambientes on‑premises para alta disponibilidade e segurança</li>
         </ul>
       </div>
@@ -137,7 +177,7 @@
     </div>
   </section>
 
-  <!-- METODOLOGIA / DIFERENCIAL -->
+  <!-- METODOLOGIA / ABORDAGEM -->
   <section class="section">
     <h2 class="section-title">Abordagem de Trabalho</h2>
     <p class="section-subtitle">Da infraestrutura à camada analítica em cinco etapas</p>
@@ -168,10 +208,21 @@
 
   <!-- PROJETOS / ESTUDOS DE CASO -->
   <section class="section" id="projetos">
-    <h2 class="section-title">Projetos e Estudos de Caso</h2>
-    <p class="section-subtitle">Exemplos de projetos técnicos com foco em dados simulados ou públicos</p>
+    <div class="projects-header">
+      <div class="projects-header-text">
+        <h2 class="section-title" style="margin-bottom:4px;">Projetos e Estudos de Caso</h2>
+        <p class="section-subtitle" style="margin-bottom:0;">
+          Exemplos de projetos técnicos com foco em dados simulados ou públicos
+        </p>
+      </div>
+      <div class="projects-header-actions">
+        <button class="projects-btn" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">
+          Discutir abordagem técnica
+        </button>
+      </div>
+    </div>
 
-    <div class="cases-grid">
+    <div class="cases-grid" style="margin-top:28px;">
 
       <div class="case-card">
         <h3>Financeiro — Controle e Desvios de Contratos</h3>
@@ -180,7 +231,7 @@
         <p class="case-meta"><strong>Etapas principais:</strong> ETL de planilhas de propostas e faturamento; padronização de itens; criação de medidas DAX para margem, desvio e realização; construção de painel gerencial com visão por cliente e projeto.</p>
         <p class="case-meta"><strong>Resultados e aprendizados:</strong> estrutura de modelo reutilizável para outros contratos e melhoria na leitura de KPIs de execução versus planejado.</p>
         <a href="#contato" class="case-cta" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">
-          Ver detalhes deste estudo de caso
+          Discutir abordagem técnica
         </a>
       </div>
 
@@ -191,7 +242,7 @@
         <p class="case-meta"><strong>Etapas principais:</strong> integração de cadastros de RH, planilhas de ponto e desligamentos; criação de dimensões de tempo e estrutura organizacional; medidas para turnover, absenteísmo e produtividade.</p>
         <p class="case-meta"><strong>Resultados e aprendizados:</strong> visão consolidada de headcount por área e melhor entendimento de padrões de desligamento e ausência.</p>
         <a href="#contato" class="case-cta" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">
-          Ver detalhes deste estudo de caso
+          Discutir abordagem técnica
         </a>
       </div>
 
@@ -202,7 +253,7 @@
         <p class="case-meta"><strong>Etapas principais:</strong> importação e transformação de arquivos mensais; padronização de números e planos; criação de métricas de consumo, picos de uso e linhas ociosas.</p>
         <p class="case-meta"><strong>Resultados e aprendizados:</strong> identificação de linhas subutilizadas e base sólida para simulações de economia por agrupamento ou cancelamento.</p>
         <a href="#contato" class="case-cta" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">
-          Ver detalhes deste estudo de caso
+          Discutir abordagem técnica
         </a>
       </div>
 
@@ -213,14 +264,14 @@
         <p class="case-meta"><strong>Etapas principais:</strong> tratamento de carimbos de data/hora; criação de hierarquias de tempo; cruzamento com informações de setores e funções; construção de visualizações por turno e área.</p>
         <p class="case-meta"><strong>Resultados e aprendizados:</strong> visão clara de padrões de acesso, suporte à revisão de políticas e melhor uso de relatórios de segurança.</p>
         <a href="#contato" class="case-cta" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">
-          Ver detalhes deste estudo de caso
+          Discutir abordagem técnica
         </a>
       </div>
 
     </div>
   </section>
 
-  <!-- SOBRE (DETALHADO) -->
+  <!-- SOBRE DETALHADO -->
   <section class="section">
     <h2 class="section-title">Sobre João V. Ramos</h2>
     <p class="section-subtitle">Carreira em Infraestrutura de TI, Dados e Business Intelligence</p>
@@ -273,7 +324,7 @@
       <div class="download-card">
         <h3>Repositórios GitHub</h3>
         <p>Códigos, scripts e exemplos de ETL, modelagem e automação relacionados aos projetos deste portfólio.</p>
-        <p style="margin-top:6px;"><a href="https://github.com/joaovramos" target="_blank" style="color:#1b77c2; text-decoration:none; font-weight:600;">Acessar GitHub</a></p>
+        <p style="margin-top:6px;"><a href="https://github.com/joaovramos" target="_blank">Acessar GitHub</a></p>
       </div>
       <div class="download-card">
         <h3>Dashboards públicos</h3>
@@ -291,7 +342,11 @@
   <section class="section" id="contato">
     <h2 class="section-title">Contato para networking técnico</h2>
     <p class="section-subtitle">Troca de ideias, revisão de projetos ou oportunidades na área de dados e infraestrutura</p>
+    <!-- IMPORTANTE: atualizar o endpoint abaixo para um e-mail/controlador sob seu domínio quando estiver definido.
+         Este formulário é destinado apenas a contato profissional e networking técnico, não a ofertas comerciais. -->
     <form class="form-container" action="https://formsubmit.co/seu-email@exemplo.com" method="POST">
+      <!-- Campo oculto para registrar finalidade não comercial do contato -->
+      <input type="hidden" name="_subject" value="Contato via portfólio técnico — networking / carreira (não comercial)">
       <div class="form-group">
         <input type="text" name="nome" placeholder="Seu nome" required>
         <input type="email" name="email" placeholder="Seu e-mail profissional" required>
@@ -312,7 +367,9 @@
       <a href="https://github.com/joaovramos" target="_blank">GitHub</a>
       <a href="mailto:contato@joaovramos.com">E-mail</a>
     </div>
-    <p style="margin-top:6px; font-size:0.9rem;">Site pessoal para fins de estudo, demonstração técnica e portfólio de carreira.</p>
+    <p class="footer-note">
+      Este site é um portfólio pessoal de caráter técnico e educacional, independente de qualquer vínculo empregatício vigente, e não constitui oferta formal de serviços de consultoria.
+    </p>
   </footer>
 
 </body>
