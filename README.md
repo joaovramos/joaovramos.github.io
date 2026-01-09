@@ -72,20 +72,7 @@ Os repositórios seguem padrão de documentação e estrutura.
 
 ---
 
-## Estrutura do Repositório
-
-```text
-joaovramos.github.io/
-├─ index.html
-├─ assets/
-│  ├─ images/
-│  └─ icons/
-├─ README.md
-└─ LICENSE
-```
----
-
-Contato e Networking
+## Contato e Networking
 
 📌 João V. Ramos
 
