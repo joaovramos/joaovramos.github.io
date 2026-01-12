@@ -3,23 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio Técnico — João V. Ramos (Infra & Data BI)</title>
-  <meta name="description" content="Portfólio técnico de João V. Ramos com projetos em Infraestrutura de TI, Redes, CFTV, governança de dados e Business Intelligence com Power BI, voltado a estudos de caso e desenvolvimento de carreira.">
+  <title>Portfólio de Análise de Dados e Power BI — João V. Ramos</title>
+  <meta name="description" content="Portfólio de projetos em análise de dados e Power BI de João V. Ramos, com dashboards em áreas como finanças, RH, telefonia, controle de acesso, logística e vendas. [web:29][web:35]">
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
     body { font-family:'Segoe UI',Arial,sans-serif; background:#f3f6fa; color:#30395c; line-height:1.6; }
 
     header { background: linear-gradient(90deg, #1b77c2 65%, #42c3e5 100%); color:#fff; padding:30px 20px; }
     .header-container { max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px; }
-    .header-text { flex:1; text-align:center; }
-    .header-text h1 { font-size:2.3rem; font-weight:700; margin-bottom:8px; }
-    .header-text p { font-size:1.1rem; max-width:620px; margin:0 auto; }
-    .cta-header { background:#fff; color:#1b77c2; border:none; font-weight:600; border-radius:25px; padding:12px 32px; font-size:1rem; cursor:pointer; }
+    .header-text { flex:1; text-align:left; min-width:260px; }
+    .header-text h1 { font-size:2.1rem; font-weight:700; margin-bottom:8px; }
+    .header-text p { font-size:1.02rem; max-width:620px; }
+    .header-profile { display:flex; align-items:center; gap:18px; }
+    .header-profile img { width:82px; height:82px; border-radius:50%; object-fit:cover; border:3px solid rgba(255,255,255,0.85); }
+    .header-profile-info { font-size:0.9rem; opacity:0.95; }
+
+    .cta-header { background:#fff; color:#1b77c2; border:none; font-weight:600; border-radius:25px; padding:12px 28px; font-size:0.95rem; cursor:pointer; white-space:nowrap; }
     .cta-header:hover { background:#1b77c2; color:#fff; }
 
     .section { background:#fff; border-radius:20px; box-shadow:0 8px 30px rgba(0,30,70,0.12); padding:40px 30px; margin:40px auto; max-width:1100px; }
     .section-title { font-size:2rem; color:#1b77c2; font-weight:600; margin-bottom:8px; text-align:center; }
-    .section-subtitle { font-size:1.05rem; color:#1b77c2; text-align:center; margin-bottom:24px; opacity:0.9; }
+    .section-subtitle { font-size:1.03rem; color:#1b77c2; text-align:center; margin-bottom:24px; opacity:0.9; }
 
     .skills-grid, .cards-grid, .cases-grid, .about-grid, .downloads-grid {
       display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:25px; margin-top:24px;
@@ -28,7 +32,7 @@
       background:#f8fbff; border-radius:15px; padding:22px; text-align:left; box-shadow:0 5px 20px rgba(0,30,70,0.1);
     }
     .card h3, .case-card h3, .about-card h3, .download-card h3 { color:#1b77c2; font-size:1.25rem; margin-bottom:8px; }
-    .card p, .case-card p, .about-card p, .download-card p { color:#555; font-size:0.97rem; }
+    .card p, .case-card p, .about-card p, .download-card p { color:#555; font-size:0.96rem; }
     .card ul, .about-card ul { padding-left:18px; margin-top:8px; color:#555; font-size:0.95rem; }
     .card li, .about-card li { margin-bottom:6px; }
 
@@ -37,31 +41,18 @@
     .case-meta { font-size:0.9rem; color:#666; margin-top:8px; }
     .case-meta strong { color:#1b77c2; }
 
-    .case-cta {
-      display:inline-block;
-      margin-top:12px;
-      background:#1b77c2;
-      color:#fff;
-      padding:10px 24px;
-      border-radius:20px;
-      text-decoration:none;
-      font-weight:600;
-      font-size:0.95rem;
-    }
-    .case-cta:hover { background:#42c3e5; }
-
     .github-link {
       display:inline-flex;
       align-items:center;
       gap:6px;
-      margin-top:12px;
+      margin-top:14px;
       background:#1b77c2;
       color:#fff;
       padding:10px 24px;
       border-radius:20px;
       text-decoration:none;
       font-weight:600;
-      font-size:0.95rem;
+      font-size:0.94rem;
     }
     .github-link:hover { background:#42c3e5; }
 
@@ -81,14 +72,9 @@
       gap:20px;
       flex-wrap:wrap;
     }
-    .projects-header-text {
-      flex:1;
-      text-align:center;
-    }
-    .projects-header-actions {
-      min-width:220px;
-      text-align:right;
-    }
+    .projects-header-text { flex:1; text-align:center; }
+    .projects-header-actions { min-width:220px; text-align:right; }
+
     .projects-btn {
       background:#1b77c2;
       color:#fff;
@@ -101,13 +87,15 @@
     }
     .projects-btn:hover { background:#42c3e5; }
 
-    footer { background:#1b77c2; color:#fff; text-align:center; padding:30px 20px; margin-top:40px; }
+    footer { background:#1b77c2; color:#fff; text-align:center; padding:26px 20px; margin-top:40px; }
     .footer-links a { color:#fff; margin:0 12px; text-decoration:none; font-weight:600; font-size:0.95rem; }
-    .footer-note { font-size:0.85rem; opacity:0.9; margin-top:8px; }
+    .footer-note { font-size:0.85rem; opacity:0.9; margin-top:6px; }
 
     @media (max-width:768px) {
       .header-container { flex-direction:column; text-align:center; }
-      .header-text h1 { font-size:1.9rem; }
+      .header-text { text-align:center; }
+      .header-profile { justify-content:center; }
+      .header-text h1 { font-size:1.8rem; }
       .projects-header { flex-direction:column; align-items:center; }
       .projects-header-actions { text-align:center; }
     }
@@ -119,117 +107,135 @@
   <header>
     <div class="header-container">
       <div class="header-text">
-        <h1>Portfólio Técnico de Soluções em TI e Data BI</h1>
-        <p>Este site apresenta projetos técnicos e estudos de caso em Infraestrutura de TI, Redes, CFTV e Análise de Dados com Power BI, utilizando dados simulados ou públicos, exclusivamente para fins demonstrativos e educacionais.</p>
+        <div class="header-profile">
+          <img src="foto_perfil.jpg" alt="Foto de perfil de João V. Ramos">
+          <div class="header-profile-info">
+            <strong>João V. Ramos</strong><br>
+            Análise de Dados, Power BI e modelagem para decisão.
+          </div>
+        </div>
+        <h1>Portfólio de Análise de Dados e Power BI</h1>
+        <p>Este portfólio reúne projetos de análise de dados e dashboards em Power BI, utilizando dados públicos ou simulados em áreas como finanças, pessoas, telefonia, controle de acesso, logística e vendas.</p>
       </div>
       <button class="cta-header" onclick="document.getElementById('projetos').scrollIntoView({behavior:'smooth'})">
-        Ver projetos e estudos de caso
+        Ver projetos em Power BI
       </button>
     </div>
   </header>
 
   <!-- RESUMO PROFISSIONAL -->
   <section class="section">
-    <h2 class="section-title">João V. Ramos</h2>
-    <p class="section-subtitle">Infraestrutura crítica, dados e decisões orientadas a resultado</p>
+    <h2 class="section-title">Sobre o portfólio</h2>
+    <p class="section-subtitle">Projetos práticos em diferentes domínios de negócio</p>
     <p style="text-align:center; max-width:820px; margin:0 auto; font-size:1rem; color:#555;">
-      Profissional de Tecnologia da Informação com mais de 15 anos de experiência em ambientes corporativos de missão crítica, atuando na interseção entre Infraestrutura de TI, Redes, Segurança, CFTV e Business Intelligence com Power BI. Foco em estabilidade operacional, qualidade de dados e construção de indicadores que apoiem decisões técnicas e de negócio.
+      Os exemplos aqui apresentados demonstram construção de modelos de dados, criação de métricas em DAX e desenvolvimento de dashboards em Power BI, sempre com foco na necessidade de negócio, independentemente da área: financeira, RH, operações ou vendas. [web:29][web:32]
     </p>
-    <p class="tagline">Formação em Ciência da Computação • MBA em Gestão de Projetos • Atuação em Infraestrutura, Dados e BI.</p>
+    <p class="tagline">Todos os dados são fictícios, públicos ou anonimizados, utilizados apenas com finalidade técnica e educacional.</p>
   </section>
 
   <!-- COMPETÊNCIAS TÉCNICAS -->
   <section class="section">
     <h2 class="section-title">Competências Técnicas</h2>
-    <p class="section-subtitle">Principais habilidades organizadas por área de atuação</p>
+    <p class="section-subtitle">Habilidades em dados, BI, infraestrutura e operação</p>
 
     <div class="skills-grid">
       <div class="card">
         <h3>Data BI & Power BI</h3>
         <ul>
-          <li>Modelagem de dados tabular e dimensional</li>
-          <li>DAX para medidas, KPIs e análises executivas</li>
-          <li>Power Query para ETL e preparação de dados</li>
-          <li>Dashboards operacionais e painéis executivos</li>
-          <li>Integração com bases SQL, arquivos e serviços cloud</li>
+          <li>Modelagem de dados tabular e dimensional para análise em múltiplas áreas.</li>
+          <li>DAX para criação de medidas, KPIs, análises temporais e comparativos.</li>
+          <li>Power Query para ETL, limpeza, normalização e união de fontes distintas.</li>
+          <li>Dashboards operacionais, gerenciais e executivos com foco em usabilidade.</li>
+          <li>Integração com arquivos, bancos relacionais e serviços em nuvem.</li>
         </ul>
       </div>
 
       <div class="card">
-        <h3>Infraestrutura & Redes</h3>
+        <h3>Backup & CFTV</h3>
         <ul>
-          <li>Segurança de rede com FortiGate, políticas de firewall e VPN</li>
-          <li>Redes Wi‑Fi corporativas com Access Points gerenciados</li>
-          <li>Switching com Cisco, Dell, HP/Aruba e Intelbras</li>
-          <li>Segmentação de redes, VLANs e ambientes multi‑SSID</li>
-          <li>Controle de acesso físico com Control ID, segmentação de áreas, galpões e zonas críticas</li>
+          <li>Planejamento e operação de rotinas de backup em ambientes on‑premisses. [web:34][web:37]</li>
+          <li>Testes de restore periódicos para estimativa de tempo de recuperação do ambiente.</li>
+          <li>Documentação de RPO/RTO e simulação de cenários de disaster recovery.</li>
+          <li>Monitoração de jobs de backup, alertas de falha e trilha de auditoria.</li>
+          <li>Ambientes de CFTV IP com foco em retenção de imagens e integridade de gravação.</li>
         </ul>
       </div>
 
       <div class="card">
-        <h3>Virtualização, Backup & CFTV</h3>
+        <h3>Windows e Virtualização</h3>
         <ul>
-          <li>Virtualização com VMware e Hyper‑V</li>
-          <li>Backup e recuperação com Veeam e soluções em nuvem</li>
-          <li>Migração de CFTV analógico para IP (Hikvision / Intelbras)</li>
-          <li>Monitoramento de ambientes e capacidade de CPD</li>
-          <li>Documentação técnica e padronização de ambientes</li>
+          <li>Administração de ambientes Windows Server em redes corporativas on‑premisses.</li>
+          <li>Infraestrutura em domínio com AD, DNS, DHCP e aplicação de políticas via GPO.</li>
+          <li>Virtualização com Hyper‑V e VMware para consolidação de servidores.</li>
+          <li>Organização de VMs por função, segmentação lógica e controle de recursos.</li>
+          <li>Integração entre serviços de diretório e aplicações de negócio.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Redes & Segurança</h3>
+        <ul>
+          <li>Segurança de perímetro com firewalls e VPNs para acesso remoto seguro. [web:34]</li>
+          <li>Redes Wi‑Fi corporativas com múltiplos SSIDs e segmentação lógica.</li>
+          <li>Segmentação de tráfego por VLANs e zonas com diferentes níveis de acesso.</li>
+          <li>Monitoramento de disponibilidade e desempenho de links e ativos críticos.</li>
+          <li>Documentação de topologia de rede e fluxos principais.</li>
         </ul>
       </div>
 
       <div class="card">
         <h3>Monitoramento & Continuidade</h3>
         <ul>
-          <li>Monitoração de servidores, links e ativos críticos</li>
-          <li>Acompanhamento de capacidade de CPD, temperatura, energia e nobreaks</li>
-          <li>Rotinas de teste de backup e planos de recuperação</li>
-          <li>Definição de alertas e indicadores de disponibilidade</li>
-          <li>Documentação de incidentes e melhoria contínua</li>
+          <li>Monitoramento de servidores, serviços e ativos críticos em ambiente on‑premisses.</li>
+          <li>Acompanhamento de capacidade, temperatura e energia em ambientes físicos.</li>
+          <li>Definição de métricas de disponibilidade, alertas e limiares de intervenção.</li>
+          <li>Rotinas de teste de recuperação e validação de procedimentos documentados.</li>
+          <li>Registro de incidentes e melhoria contínua dos processos.</li>
         </ul>
       </div>
 
       <div class="card">
         <h3>Governança de Dados & Projetos</h3>
         <ul>
-          <li>Padronização, limpeza e integração de múltiplas fontes</li>
-          <li>Definição de métricas, indicadores e camadas semânticas</li>
-          <li>Controle de custos setoriais por centro de custo e serviço de TI</li>
-          <li>Gestão de times de infraestrutura e fornecedores</li>
-          <li>Planejamento e execução de projetos de expansão e reformas técnicas</li>
+          <li>Padronização, limpeza e integração de múltiplas fontes para modelos analíticos.</li>
+          <li>Definição de métricas, indicadores e camadas semânticas para consumo em BI.</li>
+          <li>Controle de custos de TI com classificação entre OPEX e CAPEX, suportando análises de investimento e operação. [web:34][web:37]</li>
+          <li>Gestão de times com foco em priorização de demandas e alinhamento com o negócio.</li>
+          <li>Documentação de requisitos, escopo técnico e plano de evolução de soluções.</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- METODOLOGIA / ABORDAGEM -->
+  <!-- ABORDAGEM -->
   <section class="section">
-    <h2 class="section-title">Abordagem de Trabalho</h2>
-    <p class="section-subtitle">Da infraestrutura à camada analítica em seis etapas</p>
+    <h2 class="section-title">Abordagem em projetos</h2>
+    <p class="section-subtitle">Do entendimento da necessidade ao dashboard navegável</p>
 
     <div class="cards-grid" style="margin-top:28px;">
       <div class="card">
-        <h3>1. Infraestrutura como fonte de dados</h3>
-        <p>Redes, servidores, CFTV, controle de acesso e sistemas operacionais são projetados e documentados como fontes de dados confiáveis, garantindo registros consistentes desde a origem.</p>
+        <h3>1. Entendimento da necessidade</h3>
+        <p>O ponto de partida é o problema ou pergunta de negócio: financeiro, pessoas, operação, vendas ou outro domínio. A partir disso são definidas as principais métricas e visões necessárias. [web:32][web:41]</p>
       </div>
       <div class="card">
-        <h3>2. Integração e tratamento</h3>
-        <p>Processos de ETL consolidam múltiplas fontes (arquivos, bancos, logs de sistemas) com padronização, normalização e aplicação de regras de negócio para formar uma base analítica coerente.</p>
+        <h3>2. Mapeamento e preparação dos dados</h3>
+        <p>Fontes de dados são identificadas, avaliadas e tratadas em Power Query, com padronização de chaves, calendários, dimensões e regras de negócio para dar consistência ao modelo analítico.</p>
       </div>
       <div class="card">
-        <h3>3. Modelagem e BI orientado ao negócio</h3>
-        <p>Modelos de dados são estruturados para facilitar navegação por área, período, unidade e centro de custo, suportando painéis operacionais e executivos em Power BI.</p>
+        <h3>3. Modelagem e DAX</h3>
+        <p>O modelo de dados é organizado em fatos e dimensões, com relacionamento adequado à navegação esperada. Medidas em DAX são criadas para KPIs, comparativos e análises de tendência.</p>
       </div>
       <div class="card">
-        <h3>4. Segurança e confiabilidade</h3>
-        <p>Uso de dados anonimizados ou públicos em ambientes de demonstração, com controle de acesso, versionamento de arquivos e boas práticas alinhadas à LGPD.</p>
+        <h3>4. Dashboards em Power BI</h3>
+        <p>Os dashboards são desenhados com foco em clareza visual, filtros intuitivos e navegação simples, permitindo ao usuário explorar cenários sem perder o contexto das métricas principais.</p>
       </div>
       <div class="card">
-        <h3>5. Visão consultiva e aprendizado</h3>
-        <p>Cada dashboard é acompanhado de contexto, hipóteses e conclusões, com foco em explicar o raciocínio utilizado e os aprendizados técnicos obtidos no projeto.</p>
+        <h3>5. Documentação e explicação</h3>
+        <p>Cada projeto conta com breve descrição de contexto, hipóteses de análise e principais aprendizados, facilitando a avaliação técnica e a compreensão do raciocínio adotado.</p>
       </div>
       <div class="card">
-        <h3>6. Feedback e evolução contínua</h3>
-        <p>Coleta de feedback de usuários técnicos e de negócio, ajustes de modelo e visualização, documentação de aprendizados e evolução dos painéis ao longo do tempo.</p>
+        <h3>6. Evolução contínua</h3>
+        <p>Os projetos podem ser estendidos com novas visões, mais dados ou refinamento de métricas à medida que surgem novas perguntas ou necessidades dos usuários.</p>
       </div>
     </div>
   </section>
@@ -238,14 +244,14 @@
   <section class="section" id="projetos">
     <div class="projects-header">
       <div class="projects-header-text">
-        <h2 class="section-title" style="margin-bottom:4px;">Projetos e Estudos de Caso</h2>
+        <h2 class="section-title" style="margin-bottom:4px;">Projetos em Power BI</h2>
         <p class="section-subtitle" style="margin-bottom:0;">
-          Exemplos de projetos técnicos com foco em dados simulados ou públicos
+          Exemplos práticos em diferentes áreas de negócio
         </p>
       </div>
       <div class="projects-header-actions">
         <button class="projects-btn" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">
-          Discutir abordagem técnica
+          Entrar em contato
         </button>
       </div>
     </div>
@@ -253,72 +259,62 @@
     <div class="cases-grid" style="margin-top:28px;">
 
       <div class="case-card">
-        <h3>Financeiro — Controle e Desvios de Contratos</h3>
-        <p><strong>Objetivo:</strong> analisar diferenças entre propostas aprovadas e serviços efetivamente executados, identificando desvios por item, contrato e período.</p>
-        <p class="case-meta"><strong>Ferramentas:</strong> Power BI, Power Query, Excel, modelagem tabular.</p>
-        <p class="case-meta"><strong>Etapas principais:</strong> ETL de planilhas de propostas e faturamento; padronização de itens; criação de medidas DAX para margem, desvio e realização; construção de painel gerencial com visão por cliente e projeto.</p>
-        <p class="case-meta"><strong>Resultados e aprendizados:</strong> estrutura de modelo reutilizável para outros contratos e melhoria na leitura de KPIs de execução versus planejado.</p>
+        <h3>Financeiro — Contratos: Planejado x Executado</h3>
+        <p><strong>Resumo:</strong> análise de contratos aprovados em comparação com serviços executados, focando em desvios por item, contrato e período.</p>
+        <p class="case-meta"><strong>Principais pontos técnicos:</strong> modelagem de fatos de contrato e execução; medidas de desvio absoluto e percentual; análises por cliente, projeto e tempo.</p>
+        <p class="case-meta"><strong>Métricas:</strong> valor contratado, valor executado, desvio, margem e realização.</p>
         <a href="https://github.com/joaovramos/powerbi-financeiro-contratos-execucao-vs-planejado" target="_blank" class="github-link">
-          📊 Ver no GitHub
+          📊 Ver projeto no GitHub
         </a>
       </div>
 
       <div class="case-card">
-        <h3>RH — Mapa de Colaboradores e Indicadores de Pessoas</h3>
-        <p><strong>Objetivo:</strong> consolidar informações de colaboradores, cargos, unidades e históricos de movimentação para construir um mapa de força de trabalho.</p>
-        <p class="case-meta"><strong>Ferramentas:</strong> Power BI, Power Query, Excel.</p>
-        <p class="case-meta"><strong>Etapas principais:</strong> integração de cadastros de RH, planilhas de ponto e desligamentos; criação de dimensões de tempo e estrutura organizacional; medidas para turnover, absenteísmo e produtividade.</p>
-        <p class="case-meta"><strong>Resultados e aprendizados:</strong> visão consolidada de headcount por área e melhor entendimento de padrões de desligamento e ausência.</p>
+        <h3>RH — Indicadores de Pessoas</h3>
+        <p><strong>Resumo:</strong> consolidação de informações de colaboradores, cargos, unidades e histórico para acompanhar força de trabalho e movimentações.</p>
+        <p class="case-meta"><strong>Principais pontos técnicos:</strong> dimensão de tempo, estrutura organizacional, histórico de admissões e desligamentos, relação com indicadores de pessoas.</p>
+        <p class="case-meta"><strong>Métricas:</strong> headcount, turnover, absenteísmo e distribuição por área, função e unidade.</p>
         <a href="https://github.com/joaovramos/powerbi-rh-indicadores-pessoas" target="_blank" class="github-link">
-          👥 Ver no GitHub
+          👥 Ver projeto no GitHub
         </a>
       </div>
 
       <div class="case-card">
-        <h3>Telefonia — Análise de Consumo Corporativo (dados fictícios)</h3>
-        <p><strong>Objetivo:</strong> estruturar um processo de ETL para arquivos de bilhetagem, permitindo análise de consumo por linha, centro de custo e tipo de uso.</p>
-        <p class="case-meta"><strong>Ferramentas:</strong> Power Query, Power BI, arquivos CSV/Excel.</p>
-        <p class="case-meta"><strong>Etapas principais:</strong> importação e transformação de arquivos mensais de bilhetagem; padronização de números e planos; criação de métricas de consumo, picos de uso e linhas ociosas.</p>
-        <p class="case-meta"><strong>Resultados e aprendizados:</strong> identificação de linhas subutilizadas e base sólida para simulações de economia por agrupamento ou cancelamento.</p>
-        <p class="case-meta" style="font-style:italic; color:#999;"><em>Dados: massa fictícia estruturada para manter padrões de operadora real.</em></p>
+        <h3>Telefonia — Consumo Corporativo</h3>
+        <p><strong>Resumo:</strong> estruturação de processo de ETL para arquivos de bilhetagem de telefonia corporativa, permitindo análise de consumo por linha e agrupamentos.</p>
+        <p class="case-meta"><strong>Principais pontos técnicos:</strong> tratamento de massas de CDR, padronização de números, categorização de uso, criação de tabela de fatos de consumo.</p>
+        <p class="case-meta"><strong>Métricas:</strong> minutos utilizados, quantidade de chamadas, custo estimado, linhas ociosas e picos de uso.</p>
         <a href="https://github.com/joaovramos/powerbi-telefonia-consumo-corporativo" target="_blank" class="github-link">
-          📞 Ver no GitHub
+          📞 Ver projeto no GitHub
         </a>
       </div>
 
       <div class="case-card">
-        <h3>Controle de Acesso — Logs Control ID (dados fictícios)</h3>
-        <p><strong>Objetivo:</strong> transformar logs de controle de acesso em insights sobre uso de instalações, horários de maior movimento e correlação com apontamento de horas.</p>
-        <p class="case-meta"><strong>Ferramentas:</strong> Power BI, integração com arquivos de log, Excel.</p>
-        <p class="case-meta"><strong>Etapas principais:</strong> tratamento de carimbos de data/hora; criação de hierarquias de tempo; cruzamento com informações de setores e funções; construção de visualizações por turno e área.</p>
-        <p class="case-meta"><strong>Resultados e aprendizados:</strong> visão clara de padrões de acesso, suporte à revisão de políticas e melhor uso de relatórios de segurança.</p>
-        <p class="case-meta" style="font-style:italic; color:#999;"><em>Dados: registros de controle sintéticos com padrões realistas de acessos.</em></p>
+        <h3>Controle de Acesso — Logs</h3>
+        <p><strong>Resumo:</strong> utilização de registros de controle de acesso para entender padrões de uso de instalações, horários de movimento e permanência.</p>
+        <p class="case-meta"><strong>Principais pontos técnicos:</strong> tratamento de data/hora, criação de calendário detalhado, relação entre pessoas, áreas e dispositivos.</p>
+        <p class="case-meta"><strong>Métricas:</strong> acessos por área, horários de pico, permanência média e uso por perfil de acesso.</p>
         <a href="https://github.com/joaovramos/powerbi-controle-acesso-logs" target="_blank" class="github-link">
-          🔐 Ver no GitHub
+          🔐 Ver projeto no GitHub
         </a>
       </div>
 
       <div class="case-card">
-        <h3>Logística — Painel de Entregas e SLA</h3>
-        <p><strong>Objetivo:</strong> consolidar dados de logística e supply chain, analisando performance de entregas, cumprimento de SLA, custos por rota e eficiência operacional.</p>
-        <p class="case-meta"><strong>Ferramentas:</strong> Power BI, Power Query, Excel.</p>
-        <p class="case-meta"><strong>Etapas principais:</strong> integração de dados de pedidos, rastreamento e custos; criação de hierarquias de rota e transportadora; medidas de lead time, atraso vs prazo e custo por entrega; visualizações de mapa e desempenho.</p>
-        <p class="case-meta"><strong>Resultados e aprendizados:</strong> identificação de pontos críticos de performance, otimização de rotas e base para decisões de terceirização vs operação própria.</p>
-        <p class="case-meta"><strong>Fonte de dados pública:</strong> <a href="https://www.kaggle.com/datasets/datasetengineer/logistics-and-supply-chain-dataset" target="_blank" style="color:#1b77c2; text-decoration:underline;">Kaggle — Logistics and Supply Chain Dataset</a></p>
+        <h3>Logística — Entregas e SLA</h3>
+        <p><strong>Resumo:</strong> análise de entregas, cumprimento de SLAs, desempenho de transportadoras e rotas com base em dados públicos de logística. [web:28]</p>
+        <p class="case-meta"><strong>Principais pontos técnicos:</strong> modelagem de pedidos, eventos de transporte e custos; criação de medidas de lead time e atraso; uso de mapas.</p>
+        <p class="case-meta"><strong>Métricas:</strong> taxa de entregas no prazo, tempo médio de entrega, custo por entrega e desempenho por rota.</p>
         <a href="https://github.com/joaovramos/powerbi-logistica-entregas-sla" target="_blank" class="github-link">
-          🚚 Ver no GitHub
+          🚚 Ver projeto no GitHub
         </a>
       </div>
 
       <div class="case-card">
         <h3>Vendas — Pipeline e Execução</h3>
-        <p><strong>Objetivo:</strong> consolidar dados de vendas, pipeline por estágio, análise de conversão, ticket médio e realização versus meta por período e equipe.</p>
-        <p class="case-meta"><strong>Ferramentas:</strong> Power BI, Power Query, Excel, modelagem dimensional.</p>
-        <p class="case-meta"><strong>Etapas principais:</strong> estrutura de vendedor, cliente e produto; criação de dimensão de tempo e estágios de pipeline; medidas de taxa de conversão, tempo de ciclo, ticket médio; painéis de meta vs real.</p>
-        <p class="case-meta"><strong>Resultados e aprendizados:</strong> visibilidade clara de pipeline, identificação de gargalos de conversão e base para previsão de faturamento.</p>
-        <p class="case-meta" style="font-style:italic; color:#999;"><em>Dados: massa sintética estruturada com padrões realistas de vendas e conversão.</em></p>
+        <p><strong>Resumo:</strong> consolidação de oportunidades, pipeline por estágio e resultados de vendas, permitindo acompanhar funil e metas.</p>
+        <p class="case-meta"><strong>Principais pontos técnicos:</strong> modelagem de fatos de oportunidade e venda, estágios de funil, calendário de metas e visão por vendedor.</p>
+        <p class="case-meta"><strong>Métricas:</strong> taxa de conversão, valor em pipeline por estágio, ticket médio, realização versus meta e tempo de ciclo.</p>
         <a href="https://github.com/joaovramos/powerbi-vendas-pipeline-execucao" target="_blank" class="github-link">
-          💼 Ver no GitHub
+          💼 Ver projeto no GitHub
         </a>
       </div>
 
@@ -328,80 +324,67 @@
   <!-- SOBRE DETALHADO -->
   <section class="section">
     <h2 class="section-title">Sobre João V. Ramos</h2>
-    <p class="section-subtitle">Carreira em Infraestrutura de TI, Dados e Business Intelligence</p>
+    <p class="section-subtitle">Experiência em dados, BI e infraestrutura</p>
 
     <div class="about-grid">
       <div class="about-card">
-        <h3>Perfil Profissional</h3>
-        <p><strong>15+ anos em Infraestrutura & Data BI</strong><br>
-        Ciência da Computação | MBA em Gestão de Projetos.<br>
-        Atuação sólida em ambientes corporativos, unindo infraestrutura tecnológica crítica, gestão de projetos e análise estratégica de dados. Experiência desde a operação até a tomada de decisão, com foco em estabilidade, eficiência e geração de valor para o negócio.</p>
+        <img src="foto_perfil.jpg" alt="Foto de perfil de João V. Ramos">
+        <h3>Perfil</h3>
+        <p><strong>Atuação em dados e TI</strong><br>
+        Experiência combinando análise de dados, dashboards em Power BI e conhecimento de ambientes on‑premisses, redes e serviços de infraestrutura.</p>
       </div>
 
       <div class="about-card">
-        <h3>Infraestrutura & Redes Corporativas</h3>
+        <h3>Dados & BI</h3>
         <ul>
-          <li><strong>Segurança e perímetro:</strong> FortiGate, políticas de firewall, VPN e segmentação de redes.</li>
-          <li><strong>Wireless corporativo:</strong> Access Points gerenciados e redes Wi‑Fi corporativas.</li>
-          <li><strong>Switching:</strong> Cisco, Dell, HP/Aruba e Intelbras.</li>
-          <li><strong>Virtualização & backup:</strong> VMware, Hyper‑V e Veeam Backup.</li>
-          <li><strong>CFTV & monitoramento:</strong> migração de ambientes analógicos para IP (Hikvision / Intelbras).</li>
+          <li>Modelagem de dados para domínios como finanças, RH, operação e vendas.</li>
+          <li>Criação de KPIs, comparativos e análises de tendência com DAX.</li>
+          <li>ETL em Power Query para transformar dados brutos em estruturas analíticas.</li>
+          <li>Dashboards focados em clareza, navegabilidade e suporte à decisão.</li>
         </ul>
-        <p style="margin-top:10px; font-size:0.95rem; color:#666;">Ambientes on‑premises projetados para alta disponibilidade, segurança e escalabilidade.</p>
       </div>
 
       <div class="about-card">
-        <h3>Gestão, Dados & Business Intelligence</h3>
+        <h3>Fundação técnica</h3>
         <ul>
-          <li><strong>Power BI:</strong> modelagem de dados, DAX, dashboards executivos e operacionais.</li>
-          <li><strong>Governança de dados:</strong> estruturação, padronização e indicadores confiáveis.</li>
-          <li><strong>Gestão de TI:</strong> liderança de times, contratos, fornecedores e custos de TI.</li>
-          <li><strong>Projetos:</strong> expansões e reformas de salas técnicas, infraestrutura, cabeamento estruturado e ambientes críticos.</li>
+          <li>Conhecimento em ambientes Windows Server e redes corporativas.</li>
+          <li>Experiência em backup, recuperação e continuidade em ambientes on‑premisses.</li>
+          <li>Vivência em projetos de infraestrutura e operação de TI.</li>
         </ul>
-        <p style="margin-top:10px; font-size:0.95rem; color:#666;">Dados conectados à infraestrutura para decisões mais rápidas, seguras e baseadas em fatos.</p>
       </div>
     </div>
   </section>
 
   <!-- DOWNLOADS / ACESSOS -->
   <section class="section">
-    <h2 class="section-title">Downloads e Acessos</h2>
-    <p class="section-subtitle">Materiais de apoio e referências técnicas</p>
+    <h2 class="section-title">Downloads e acessos</h2>
+    <p class="section-subtitle">Materiais complementares e presença online</p>
 
     <div class="downloads-grid">
       <div class="download-card">
         <h3>Currículo em PDF</h3>
-        <p>Versão atualizada do currículo com histórico profissional, formação e principais projetos.</p>
+        <p>Versão atualizada do currículo com histórico profissional, formação e principais projetos em dados e BI.</p>
         <p style="font-size:0.9rem; color:#666;"><em>(Adicionar link para arquivo PDF quando estiver disponível.)</em></p>
       </div>
       <div class="download-card">
-        <h3>Repositórios GitHub</h3>
-        <p>Códigos, scripts e exemplos de ETL, modelagem e automação relacionados aos projetos deste portfólio.</p>
+        <h3>Repositórios no GitHub</h3>
+        <p>Códigos, arquivos de exemplo e estruturas de modelos relacionados aos projetos apresentados neste portfólio.</p>
         <p style="margin-top:6px;"><a href="https://github.com/joaovramos" target="_blank">Acessar GitHub</a></p>
       </div>
-      <div class="download-card">
-        <h3>Dashboards públicos</h3>
-        <p>Links para versões públicas ou capturas de tela de dashboards construídos com dados simulados ou públicos.</p>
-        <p style="font-size:0.9rem; color:#666;"><em>(Adicionar links ou imagens conforme forem publicados.)</em></p>
-      </div>
     </div>
-
-    <p style="margin-top:24px; font-size:0.9rem; color:#666; text-align:center;">
-      <strong>Disclaimer sobre dados:</strong> todos os projetos apresentados neste portfólio utilizam dados públicos, fictícios ou devidamente anonimizados. Não há exposição de dados confidenciais ou proprietários de nenhuma organização.
-    </p>
   </section>
 
-  <!-- CONTATO (NEUTRO / NÃO COMERCIAL) -->
+  <!-- CONTATO -->
   <section class="section" id="contato">
-    <h2 class="section-title">Contato para networking técnico</h2>
-    <p class="section-subtitle">Troca de ideias, revisão de projetos ou oportunidades na área de dados e infraestrutura</p>
+    <h2 class="section-title">Contato</h2>
+    <p class="section-subtitle">Para networking e futuras oportunidades em dados e BI</p>
     <form class="form-container" action="https://formsubmit.co/joaovramos@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="Contato via portfólio técnico — networking / carreira (não comercial)">
+      <input type="hidden" name="_subject" value="Contato via portfólio — dados e BI">
       <input type="hidden" name="_captcha" value="false">
       <div class="form-group">
         <input type="text" name="nome" placeholder="Seu nome" required>
-        <input type="email" name="email" placeholder="Seu e-mail profissional" required>
-        <input type="text" name="assunto" placeholder="Tema do contato (projeto, networking, carreira etc.)">
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <input type="text" name="assunto" placeholder="Assunto (ex.: projeto, oportunidade, networking)">
       </div>
       <div class="form-group">
         <textarea name="mensagem" rows="5" placeholder="Mensagem ou contexto do contato..." required></textarea>
@@ -412,14 +395,14 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2026 Portfólio Técnico — João V. Ramos</p>
+    <p>&copy; 2026 Portfólio de Análise de Dados e Power BI — João V. Ramos</p>
     <div class="footer-links">
       <a href="https://linkedin.com/in/joaovramos" target="_blank">LinkedIn</a>
       <a href="https://github.com/joaovramos" target="_blank">GitHub</a>
       <a href="mailto:joaovramos@gmail.com">E-mail</a>
     </div>
     <p class="footer-note">
-      Este site é um portfólio pessoal de caráter técnico e educacional, independente de qualquer vínculo empregatício vigente, e não constitui oferta formal de serviços de consultoria.
+      Este site tem caráter pessoal e técnico, sem natureza comercial, consultiva ou publicitária.
     </p>
   </footer>
 
