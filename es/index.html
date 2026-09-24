@@ -117,6 +117,22 @@
       .projects-header { flex-direction:column; align-items:center; }
       .projects-header-actions { text-align:center; }
     }
+  
+    /* Seletor de idioma */
+    .language-switcher {
+      max-width:1100px; margin:0 auto; padding:14px 20px 0;
+      display:flex; justify-content:flex-end; gap:6px;
+    }
+    .language-switcher a {
+      color:#1b77c2; text-decoration:none; font-size:.82rem; font-weight:700;
+      padding:6px 9px; border-radius:8px; transition:background .2s ease,color .2s ease;
+    }
+    .language-switcher a:hover { background:#eef6fc; }
+    .language-switcher a.active { background:#1b77c2; color:#fff; pointer-events:none; }
+    @media (max-width:768px) {
+      .language-switcher { justify-content:center; padding-top:10px; }
+    }
+
   </style>
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-23PLDEMBZC"></script>
@@ -129,6 +145,12 @@
 </script>
 </head>
 <body>
+  <nav class="language-switcher" aria-label="Language selector">
+    <a href="../">🇧🇷 PT</a>
+    <a href="../en/">🇺🇸 EN</a>
+    <a href="#" class="active" aria-current="page">🇪🇸 ES</a>
+  </nav>
+
 <!-- HEADER / INTRO PORTFÓLIO -->
 <header>
 <div class="header-container">
