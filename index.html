@@ -41,7 +41,15 @@
       background:#f8fbff; border-radius:15px; padding:22px; text-align:left; box-shadow:0 5px 20px rgba(0,30,70,0.1);
     }
     .card h3, .case-card h3, .about-card h3, .download-card h3 { color:#1b77c2; font-size:1.25rem; margin-bottom:8px; }
-    .card p, .case-card p, .about-card p, .download-card p { color:#555; font-size:0.96rem; }
+    .card p, .case-card p, .about-card p, .download-card p { color:#555; font-size:0.96rem; text-align:justify; }
+    .card li, .about-card li { text-align:justify; }
+    .case-meta { text-align:justify; }
+    .section > p:not(.section-subtitle):not(.tagline) { text-align:justify; }
+    .about-card { height:100%; }
+    .about-card ul { padding-left:20px; }
+    .final-cta { text-align:center; margin-top:30px; padding-top:24px; border-top:1px solid #e6edf5; }
+    .final-cta p { max-width:760px; margin:0 auto 16px; color:#555; text-align:center; }
+    .final-cta .projects-btn { display:inline-block; text-decoration:none; }
     .card ul, .about-card ul { padding-left:18px; margin-top:8px; color:#555; font-size:0.95rem; }
     .card li, .about-card li { margin-bottom:6px; }
 
@@ -260,19 +268,8 @@
 
   <!-- PROJETOS / ESTUDOS DE CASO -->
   <section class="section" id="projetos">
-    <div class="projects-header">
-      <div class="projects-header-text">
-        <h2 class="section-title" style="margin-bottom:4px;">Projetos e casos práticos</h2>
-        <p class="section-subtitle" style="margin-bottom:0;">
-          Experiências reais apresentadas sem exposição de dados corporativos
-        </p>
-      </div>
-      <div class="projects-header-actions">
-        <button class="projects-btn" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">
-          Entrar em contato
-        </button>
-      </div>
-    </div>
+    <h2 class="section-title">Projetos e casos práticos</h2>
+    <p class="section-subtitle">Experiências reais apresentadas sem exposição de dados corporativos</p>
 
     <div class="cases-grid" style="margin-top:28px;">
 
@@ -325,23 +322,23 @@
   <!-- SOBRE DETALHADO -->
   <section class="section">
     <h2 class="section-title">Sobre João V. Ramos</h2>
-    <p class="section-subtitle">Trajetória em infraestrutura, operação, projetos, dados e automação</p>
+    <p class="section-subtitle">Experiência construída entre operação, infraestrutura, projetos, sistemas, dados e automação</p>
 
     <div class="about-grid">
       <div class="about-card">
-        <img src="foto_perfil.jpg" alt="Foto de perfil de João V. Ramos">
-        <h3>Perfil</h3>
-        <p><strong>15+ anos em Tecnologia da Informação</strong><br>
-        Formação em Ciência da Computação e MBA em Gestão de Projetos, com especialização em Analytics &amp; BI em andamento. Trajetória construída em infraestrutura e operação corporativa, evoluindo para atuação transversal em ITSM, SAP, dados, BI, automação e integração de sistemas.</p>
+        <h3>Perfil profissional</h3>
+        <p><strong>15+ anos em Tecnologia da Informação.</strong> Formação em Ciência da Computação, MBA em Gestão de Projetos e especialização em Analytics &amp; BI em andamento. Minha trajetória foi construída em ambientes corporativos, partindo de infraestrutura e operação e ampliando a atuação para gestão de serviços, SAP, dados, BI, automação e integração de sistemas.</p>
+        <p style="margin-top:10px;">Essa base permite transitar entre o problema percebido pelo usuário, a sustentação técnica e a necessidade do negócio, buscando soluções que sejam funcionais, documentadas e sustentáveis no dia a dia.</p>
       </div>
 
       <div class="about-card">
         <h3>Atuação atual</h3>
         <ul>
-          <li>Sustentação local de usuários e ambientes corporativos.</li>
-          <li>Acompanhamento de AMS SAP em múltiplas unidades.</li>
-          <li>Administração e evolução de GLPI/ITSM.</li>
-          <li>Projetos de BI, integração de dados e automação de processos.</li>
+          <li>Sustentação local de usuários, estações, infraestrutura e serviços corporativos.</li>
+          <li>Acompanhamento de AMS SAP em múltiplas unidades, com triagem, governança de chamados, priorização e interface com consultorias e áreas internas.</li>
+          <li>Administração e evolução de GLPI/ITSM, incluindo catálogo, perfis, grupos, LDAP, SLA/OLA, ativos, indicadores e melhoria de processos.</li>
+          <li>Atuação como ponto focal técnico em demandas locais de infraestrutura, conectividade e apoio a ambientes de CFTV.</li>
+          <li>Desenvolvimento de projetos de BI, integração de dados e automação de processos, transformando necessidades operacionais em soluções aplicáveis.</li>
         </ul>
       </div>
 
@@ -350,8 +347,9 @@
         <ul>
           <li>Ciência da Computação e MBA em Gestão de Projetos.</li>
           <li>Especialização em Analytics &amp; BI em andamento.</li>
-          <li>Base em redes e infraestrutura, com conhecimentos associados a MTCNA/CCNA.</li>
-          <li>Direcionamento para posições sênior e de coordenação, conectando conhecimento técnico, processos e visão de negócio.</li>
+          <li>Base técnica em redes, infraestrutura, virtualização, segurança, bancos de dados e ambientes corporativos.</li>
+          <li>Experiência prática conectando operação, fornecedores, sistemas, dados e usuários em ambientes com múltiplas áreas e unidades.</li>
+          <li>Desenvolvimento profissional orientado a posições sênior e de coordenação, combinando profundidade técnica, organização, processos, comunicação e visão de negócio.</li>
         </ul>
       </div>
     </div>
@@ -374,12 +372,18 @@
         <p style="margin-top:6px;"><a href="https://github.com/joaovramos" target="_blank">Acessar GitHub</a></p>
       </div>
     </div>
+    <div class="final-cta">
+      <p>Se minha experiência fizer sentido para uma oportunidade, projeto ou conexão profissional, entre em contato.</p>
+      <button class="projects-btn" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">
+        Entrar em contato
+      </button>
+    </div>
   </section>
 
   <!-- CONTATO -->
   <section class="section" id="contato">
-    <h2 class="section-title">Contato</h2>
-    <p class="section-subtitle">Para networking, oportunidades profissionais e troca técnica</p>
+    <h2 class="section-title">Vamos conversar?</h2>
+    <p class="section-subtitle">Para oportunidades profissionais, networking e conversas sobre tecnologia, dados, infraestrutura e automação</p>
     <form class="form-container" action="https://formsubmit.co/joaovramos@gmail.com" method="POST">
       <input type="hidden" name="_subject" value="Contato via portfólio — João V. Ramos">
       <input type="hidden" name="_captcha" value="false">
@@ -399,7 +403,7 @@
   <footer>
     <p>&copy; 2026 Tecnologia aplicada à operação e ao negócio — João V. Ramos</p>
     <div class="footer-links">
-      <a href="https://linkedin.com/in/joaovramos" target="_blank">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/joao-v-ramos/" target="_blank">LinkedIn</a>
       <a href="https://github.com/joaovramos" target="_blank">GitHub</a>
       <a href="mailto:joaovramos@gmail.com">E-mail</a>
     </div>
