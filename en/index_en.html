@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>João Ramos | IT Infrastructure, Analytics &amp; BI, ITSM &amp; Automation</title>
+<meta content="Professional portfolio of João V. Ramos: IT infrastructure, Analytics &amp; BI, ITSM/ITAM, SAP/AMS, automation and systems integration." name="description"/>
+<meta content="João Ramos" name="author"/>
+<meta content="João Ramos, Infraestrutura de TI, ITSM, GLPI, SAP, Power BI, Business Intelligence, Automação, n8n, Redes, SQL" name="keywords"/>
+<meta content="index, follow" name="robots"/>
+<meta content="João Ramos | IT Infrastructure, Analytics &amp; BI, ITSM &amp; Automation" property="og:title"/>
+<meta content="Professional portfolio of João V. Ramos: IT infrastructure, Analytics &amp; BI, ITSM/ITAM, SAP/AMS, automation and systems integration." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://joaovramos.github.io/" property="og:url"/>
+<meta content="https://joaovramos.github.io/foto_perfil.jpg" property="og:image"/>
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Segoe UI',Arial,sans-serif; background:#f3f6fa; color:#30395c; line-height:1.6; }
+
+    header { background: linear-gradient(90deg, #1b77c2 65%, #42c3e5 100%); color:#fff; padding:30px 20px; }
+    .header-container { max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px; }
+    .header-text { flex:1; text-align:left; min-width:260px; }
+    .header-text h1 { font-size:2.1rem; font-weight:700; margin-bottom:8px; }
+    .header-text p { font-size:1.02rem; max-width:620px; }
+    .header-profile { display:flex; align-items:center; gap:18px; }
+    .header-profile img { width:82px; height:82px; border-radius:50%; object-fit:cover; border:3px solid rgba(255,255,255,0.85); }
+    .header-profile-info { font-size:0.9rem; opacity:0.95; }
+
+    .cta-header { background:#fff; color:#1b77c2; border:none; font-weight:600; border-radius:25px; padding:12px 28px; font-size:0.95rem; cursor:pointer; white-space:nowrap; }
+    .cta-header:hover { background:#1b77c2; color:#fff; }
+
+    .section { background:#fff; border-radius:20px; box-shadow:0 8px 30px rgba(0,30,70,0.12); padding:40px 30px; margin:40px auto; max-width:1100px; }
+    .section-title { font-size:2rem; color:#1b77c2; font-weight:600; margin-bottom:8px; text-align:center; }
+    .section-subtitle { font-size:1.03rem; color:#1b77c2; text-align:center; margin-bottom:24px; opacity:0.9; }
+
+    .skills-grid, .cards-grid, .cases-grid, .about-grid, .downloads-grid {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:25px; margin-top:24px;
+    }
+    .card, .case-card, .about-card, .download-card {
+      background:#f8fbff; border-radius:15px; padding:22px; text-align:left; box-shadow:0 5px 20px rgba(0,30,70,0.1);
+    }
+    .card h3, .case-card h3, .about-card h3, .download-card h3 { color:#1b77c2; font-size:1.25rem; margin-bottom:8px; }
+    .card p, .case-card p, .about-card p, .download-card p { color:#555; font-size:0.96rem; text-align:justify; }
+    .card li, .about-card li { text-align:justify; }
+    .case-meta { text-align:justify; }
+    .section > p:not(.section-subtitle):not(.tagline) { text-align:justify; }
+    .about-card { height:100%; }
+    .about-card ul { padding-left:20px; }
+    .final-cta { text-align:center; margin-top:30px; padding-top:24px; border-top:1px solid #e6edf5; }
+    .final-cta p { max-width:760px; margin:0 auto 16px; color:#555; text-align:center; }
+    .final-cta .projects-btn { display:inline-block; text-decoration:none; }
+    .card ul, .about-card ul { padding-left:18px; margin-top:8px; color:#555; font-size:0.95rem; }
+    .card li, .about-card li { margin-bottom:6px; }
+
+    .tagline { text-align:center; font-size:0.95rem; color:#555; margin-top:10px; }
+
+    .case-meta { font-size:0.9rem; color:#666; margin-top:8px; }
+    .case-meta strong { color:#1b77c2; }
+
+    .github-link {
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      margin-top:14px;
+      background:#1b77c2;
+      color:#fff;
+      padding:10px 24px;
+      border-radius:20px;
+      text-decoration:none;
+      font-weight:600;
+      font-size:0.94rem;
+    }
+    .github-link:hover { background:#42c3e5; }
+
+    .form-container { max-width:500px; margin:0 auto; }
+    .form-group input, .form-group textarea { width:100%; margin:12px 0; padding:13px; border:2px solid #e1e8f0; border-radius:12px; font-size:1rem; }
+    .form-btn { background:#1b77c2; color:white; border:none; padding:14px 36px; border-radius:24px; font-size:1.05rem; font-weight:600; cursor:pointer; width:100%; }
+    .form-btn:hover { background:#42c3e5; }
+
+    .about-card img { width:80px; height:80px; border-radius:50%; margin-bottom:10px; object-fit:cover; }
+
+    .downloads-grid .download-card a { color:#1b77c2; text-decoration:none; font-weight:600; }
+    .cv-card h3 { white-space:nowrap; font-size:1.12rem; }
+
+    .projects-header {
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+    .projects-header-text { flex:1; text-align:center; }
+    .projects-header-actions { min-width:220px; text-align:right; }
+
+    .projects-btn {
+      background:#1b77c2;
+      color:#fff;
+      border:none;
+      padding:10px 26px;
+      border-radius:22px;
+      font-weight:600;
+      font-size:0.95rem;
+      cursor:pointer;
+    }
+    .projects-btn:hover { background:#42c3e5; }
+
+    footer { background:#1b77c2; color:#fff; text-align:center; padding:26px 20px; margin-top:40px; }
+    .footer-links a { color:#fff; margin:0 12px; text-decoration:none; font-weight:600; font-size:0.95rem; }
+    .footer-note { font-size:0.85rem; opacity:0.9; margin-top:6px; }
+
+    @media (max-width:768px) {
+      .header-container { flex-direction:column; text-align:center; }
+      .header-text { text-align:center; }
+      .header-profile { justify-content:center; }
+      .header-text h1 { font-size:1.8rem; }
+      .projects-header { flex-direction:column; align-items:center; }
+      .projects-header-actions { text-align:center; }
+    }
+  </style>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-23PLDEMBZC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-23PLDEMBZC');
+</script>
+</head>
+<body>
+<!-- HEADER / INTRO PORTFÓLIO -->
+<header>
+<div class="header-container">
+<div class="header-text">
+<div class="header-profile">
+<img alt="Foto de perfil de João V. Ramos" src="../foto_perfil.jpg"/>
+<div class="header-profile-info">
+<strong>João V. Ramos</strong><br/>
+            Infrastructure • ITSM • SAP • Data &amp; BI • Automation
+          </div>
+</div>
+<h1>Technology applied to operations and business</h1>
+<p>A career built from infrastructure and corporate environment support to service management, data, BI and automation. Here I present real-world experience and solutions in anonymized form, highlighting the problem, technical approach and results achieved.</p>
+</div>
+<button class="cta-header" onclick="document.getElementById('projetos').scrollIntoView({behavior:'smooth'})">
+        View projects and case studies
+      </button>
+</div>
+</header>
+<!-- RESUMO PROFISSIONAL -->
+<section class="section">
+<h2 class="section-title">Professional profile</h2>
+<p class="section-subtitle">Multidisciplinary experience focused on continuity, efficiency and information for decision-making</p>
+<p style="text-align:center; max-width:820px; margin:0 auto; font-size:1rem; color:#555;">
+      Information Technology professional with over 15 years of experience in corporate infrastructure, networking, support, projects and operations. In recent years, I have expanded this background into ITSM, SAP, Data &amp; BI and automation, connecting operations, processes and information to solve real business problems.
+    </p>
+<p class="tagline">The cases presented protect company, user, financial, address and other sensitive information. When necessary, data and scenarios are anonymized, adapted or simulated.</p>
+</section>
+<!-- COMPETÊNCIAS TÉCNICAS -->
+<section class="section">
+<h2 class="section-title">Technical Skills</h2>
+<p class="section-subtitle">Areas of expertise developed throughout my professional career</p>
+<div class="skills-grid">
+<div class="card">
+<h3>Data, BI &amp; Power BI</h3>
+<ul>
+<li>Tabular and dimensional data modeling for analysis across multiple business areas.</li>
+<li>DAX for measures, KPIs, time intelligence and comparative analysis.</li>
+<li>Power Query for ETL, cleansing, normalization and integration of multiple data sources.</li>
+<li>Operational, management and executive dashboards focused on usability.</li>
+<li>Integration with files, relational databases and cloud services.</li>
+</ul>
+</div>
+<div class="card">
+<h3>Infrastructure, Backup &amp; CCTV</h3>
+<ul>
+<li>Planning and operation of backup routines in on-premises environments. </li>
+<li>Periodic restore tests to estimate environment recovery time.</li>
+<li>Disaster recovery scenario testing.</li>
+<li>Monitoring of backup jobs, failure alerts and audit trails.</li>
+<li>IP CCTV environments focused on image retention and recording integrity.</li>
+</ul>
+</div>
+<div class="card">
+<h3>Windows &amp; Virtualization</h3>
+<ul>
+<li>Administration of Windows Server environments in corporate on-premises networks.</li>
+<li>Domain infrastructure with AD, DNS, DHCP and policy enforcement through GPO.</li>
+<li>Virtualization with Hyper-V and VMware for server consolidation.</li>
+<li>Organization of VMs by function, logical segmentation and resource control.</li>
+<li>Integration between directory services and business applications.</li>
+</ul>
+</div>
+<div class="card">
+<h3>Networking &amp; Security</h3>
+<ul>
+<li>Security using Fortinet/Mikrotik firewalls and VPNs for secure remote access.</li>
+<li>Corporate Wi-Fi networks with multiple SSIDs and logical segmentation.</li>
+<li>Traffic segmentation using VLANs and zones with different access levels.</li>
+<li>Availability and performance monitoring of links and critical assets.</li>
+<li>Documentation of network topology and key traffic flows.</li>
+</ul>
+</div>
+<div class="card">
+<h3>ITSM, Support &amp; Continuity</h3>
+<ul>
+<li>Administration and continuous improvement of an ITSM platform using GLPI, including service catalog, profiles, groups, entities and LDAP authentication.</li>
+<li>Management of incidents, requests, SLA/OLA, support queues and operational KPIs.</li>
+<li>Local support and coordination with specialized teams and consulting partners in corporate environments.</li>
+<li>SAP request monitoring, triage, routing and follow-up on resolution actions.</li>
+<li>Operational continuity, documentation, root-cause analysis and continuous improvement.</li>
+</ul>
+</div>
+<div class="card">
+<h3>Automation, Integration &amp; Projects</h3>
+<ul>
+<li>Development of data automation and integration solutions using Microsoft ecosystem tools, including Power Automate, OneDrive and Power BI.</li>
+<li>Process automation and integrations using n8n, APIs, relational databases, messaging and web services.</li>
+<li>Docker containers for isolation of services, databases and supporting applications.</li>
+<li>Requirements gathering, solution design, prototyping, implementation and documentation.</li>
+<li>Cost awareness, OPEX/CAPEX, demand prioritization and technical alignment with the business.</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- PROJETOS / ESTUDOS DE CASO -->
+<section class="section" id="projetos">
+<h2 class="section-title">Projects and Case Studies</h2>
+<p class="section-subtitle">Real-world experience presented without exposing corporate data</p>
+<div class="cases-grid" style="margin-top:28px;">
+<div class="case-card">
+<h3>ITSM — Centralized Service and Asset Management</h3>
+<p><strong>Anonymized real-world scenario:</strong> an environment with separate tools for service desk, inventory and remote support, resulting in vendor dependency and limited operational standardization.</p>
+<p class="case-meta"><strong>Role:</strong> implementation and continuous improvement of GLPI in containers, LDAP integration, configuration of entities, profiles, groups, service catalog, SLA/OLA and reports; adoption of an internally managed remote access solution.</p>
+<p class="case-meta"><strong>Result:</strong> consolidation of ITSM and inventory functions, greater internal control of the environment and reduced dependency on previously used third-party tool contracts.</p>
+</div>
+<div class="case-card">
+<h3>Automation — WhatsApp Service Integrated with Business Processes</h3>
+<p><strong>Anonymized real-world scenario:</strong> requests and field information received through messages, creating risks of data loss, rework and limited traceability.</p>
+<p class="case-meta"><strong>Role:</strong> design of a conversational workflow integrated through n8n and a WhatsApp API, PostgreSQL and Redis, handling text, audio, photos, videos and documents, as well as notifications and status updates.</p>
+<p class="case-meta"><strong>Result:</strong> a functional MVP capable of registering requests, organizing attachments, routing responsible teams and maintaining a structured process history.</p>
+</div>
+<div class="case-card">
+<h3>Data &amp; BI — Sales Management Flash Dashboard</h3>
+<p><strong>Anonymized real-world scenario:</strong> the need to transform dispersed commercial data into a recurring and objective management view.</p>
+<p class="case-meta"><strong>Role:</strong> preparation and integration of data sources, definition of rules and KPIs, analytical modeling and development of Power BI views for performance monitoring.</p>
+<p class="case-meta"><strong>Result:</strong> consolidated and standardized information, reducing manual preparation effort and improving analysis of results and variances.</p>
+</div>
+<div class="case-card">
+<h3>Data Integration — ERP Extraction for an Analytical Layer</h3>
+<p><strong>Anonymized real-world scenario:</strong> the need to make corporate ERP data available for external consumption without affecting transactional operations.</p>
+<p class="case-meta"><strong>Role:</strong> proof of concept for controlled data extraction, generation of structured files and design of the analytical consumption process.</p>
+<p class="case-meta"><strong>Result:</strong> technical validation of a simple and traceable alternative for feeding analytics and integrations without exposing production environment details.</p>
+</div>
+<div class="case-card">
+<h3>SAP — Support and Ticket Governance</h3>
+<p><strong>Anonymized real-world scenario:</strong> distributed operations across multiple business units, functional queues and external consulting support, requiring close monitoring after significant environment changes.</p>
+<p class="case-meta"><strong>Role:</strong> ticket monitoring, triage by business unit and queue, identification of responsible teams, analysis of ticket aging and last interaction, plus structured follow-up with consulting partners and requesters.</p>
+<p class="case-meta"><strong>Result:</strong> greater visibility into pending items, ownership and ticket aging, supporting prioritization and reducing tickets without updates.</p>
+</div>
+<div class="case-card">
+<h3>Access Control — Automation and Operational Analysis</h3>
+<p><strong>Anonymized real-world scenario:</strong> the need to transform operational access records into useful information for control, auditing and analysis.</p>
+<p class="case-meta"><strong>Role:</strong> development of data automation and integration solutions using Microsoft ecosystem tools, including Power Automate, OneDrive and Power BI.</p>
+<p class="case-meta"><strong>Result:</strong> a recurring and structured process with less manual intervention and consolidated information for monitoring.</p>
+<a class="github-link" href="https://github.com/joaovramos/powerbi-controle-acesso-logs" target="_blank">🔐 View technical case on GitHub</a>
+</div>
+</div>
+</section>
+<!-- SOBRE DETALHADO -->
+<section class="section">
+<h2 class="section-title">About João V. Ramos</h2>
+<p class="section-subtitle">Experience built across operations, infrastructure, projects, systems, data and automation</p>
+<div class="about-grid">
+<div class="about-card">
+<h3>Professional profile</h3>
+<p><strong>15+ years in Information Technology.</strong> Degree in Computer Science, MBA in Project Management and a postgraduate specialization in Analytics &amp; BI in progress. My career has been built in corporate environments, starting in infrastructure and operations and expanding into service management, SAP, data, BI, automation and systems integration.</p>
+<p style="margin-top:10px;">This background enables me to work across user-reported issues, technical support and business needs, delivering solutions that are practical, documented and sustainable in day-to-day operations.</p>
+</div>
+<div class="about-card">
+<h3>Current responsibilities</h3>
+<ul>
+<li>Local support for users, workstations, infrastructure and corporate services.</li>
+<li>SAP AMS management across multiple business units, including triage, ticket governance, prioritization and coordination with consulting partners and internal teams.</li>
+<li>Administration and continuous improvement of GLPI/ITSM, including service catalog, profiles, groups, LDAP, SLA/OLA, assets, KPIs and process improvement.</li>
+<li>Technical focal point for local infrastructure, connectivity and CCTV support requirements.</li>
+<li>Development of BI, data integration and process automation projects, turning operational needs into practical solutions.</li>
+</ul>
+</div>
+<div class="about-card">
+<h3>Education and career direction</h3>
+<ul>
+<li>Computer Science degree and MBA in Project Management.</li>
+<li>Postgraduate specialization in Analytics &amp; BI in progress.</li>
+<li>Technical background in networking, infrastructure, virtualization, security, databases and corporate environments.</li>
+<li>Hands-on experience connecting operations, vendors, systems, data and users across multi-team and multi-site environments.</li>
+<li>Career development focused on senior and coordination roles, combining technical depth, organization, processes, communication and business perspective.</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- CURRÍCULO E PRESENÇA PROFISSIONAL -->
+<section class="section">
+<h2 class="section-title">Resume and professional presence</h2>
+<p class="section-subtitle">Resume, technical projects and professional channels</p>
+<div class="downloads-grid">
+<div class="download-card cv-card">
+<h3>Resume / CV</h3>
+<p style="margin-top:10px;"><a href="../curriculos/Joao_Ramos_Curriculo_2026_PT.pdf" rel="noopener" target="_blank">🇧🇷 Portuguese version</a></p>
+<p style="margin-top:8px;"><a href="../curriculos/Joao_Ramos_Resume_2026_EN.pdf" rel="noopener" target="_blank">🇺🇸 English version</a></p>
+<p style="margin-top:8px;"><a href="../curriculos/Joao_Ramos_Curriculo_2026_ES.pdf" rel="noopener" target="_blank">🇪🇸 Spanish version</a></p>
+</div>
+<div class="download-card">
+<h3>LinkedIn</h3>
+<p>Professional experience, education and skills.</p>
+<p style="margin-top:10px;"><a href="https://www.linkedin.com/in/joao-v-ramos/" rel="noopener" target="_blank">Open LinkedIn</a></p>
+</div>
+<div class="download-card">
+<h3>GitHub</h3>
+<p>Technical projects, code and case studies presented in this portfolio.</p>
+<p style="margin-top:10px;"><a href="https://github.com/joaovramos" rel="noopener" target="_blank">Open GitHub</a></p>
+</div>
+</div>
+<div class="final-cta">
+<p>If my experience is relevant to an opportunity, project or professional connection, feel free to get in touch.</p>
+<button class="projects-btn" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">
+        Get in touch
+      </button>
+</div>
+</section>
+<!-- CONTATO -->
+<section class="section" id="contato">
+<h2 class="section-title">Let's connect</h2>
+<p class="section-subtitle">For professional opportunities, networking and conversations about technology, data, infrastructure and automation</p>
+<form action="https://formsubmit.co/joaovramos@gmail.com" class="form-container" method="POST">
+<input name="_subject" type="hidden" value="Contato via portfólio — João V. Ramos"/>
+<input name="_captcha" type="hidden" value="false"/>
+<div class="form-group">
+<input name="nome" placeholder="Your name" required="" type="text"/>
+<input name="email" placeholder="Your email" required="" type="email"/>
+<input name="assunto" placeholder="Subject (e.g. project, opportunity, networking)" type="text"/>
+</div>
+<div class="form-group">
+<textarea name="mensagem" placeholder="Message or context..." required="" rows="5"></textarea>
+</div>
+<button class="form-btn" type="submit">Send message</button>
+</form>
+</section>
+<!-- FOOTER -->
+<footer>
+<p>© 2026 Technology applied to operations and business — João V. Ramos</p>
+<div class="footer-links">
+<a href="https://www.linkedin.com/in/joao-v-ramos/" target="_blank">LinkedIn</a>
+<a href="https://github.com/joaovramos" target="_blank">GitHub</a>
+<a href="mailto:joaovramos@gmail.com">E-mail</a>
+</div>
+<p class="footer-note">
+      This is a personal and technical portfolio and does not constitute a commercial, consulting or advertising service.
+    </p>
+</footer>
+</body>
+</html>
